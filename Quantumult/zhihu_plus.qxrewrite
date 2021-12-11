@@ -45,5 +45,5 @@
 # 屏蔽知乎“我的”页面推荐开通会员的卡片
 ^https?:\/\/api\.zhihu\.com\/people\/self\/new_user_card url reject-200
 
-# hostname = www.zhihu.com,api.zhihu.com,appcloud2.zhihu.com,zhuanlan.zhihu.com
-hostname = *.zhihu.com
+hostname = www.zhihu.com,api.zhihu.com,appcloud2.zhihu.com,zhuanlan.zhihu.com
+#hostname = *.zhihu.com
