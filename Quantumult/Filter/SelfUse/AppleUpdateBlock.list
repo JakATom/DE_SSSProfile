@@ -1,0 +1,7 @@
+# >苹果自动更新：reject
+
+DOMAIN, ocsp.int-x3.letsencrypt.org
+DOMAIN, ocsp.apple.com
+DOMAIN, world-gen.g.aaplimg.com
+DOMAIN, mesu.apple.com
+DOMAIN, gdmf.apple.com
