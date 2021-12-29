@@ -1,0 +1,695 @@
+# generated at 2021.12.19 
+# 基于神机规格，整合 QX_maze_2.0.conf
+# 将自用规则托管Github DE_SSSProfile
+# 
+# 
+
+
+# Port of HTTP(S) proxy server on the local end
+# port: 7890
+
+# Port of SOCKS5 proxy server on the local end
+# socks-port: 7891
+
+# Transparent proxy server port for Linux and macOS
+# redir-port: 7892
+
+# HTTP(S) and SOCKS5 server on the same port
+mixed-port: 7890
+
+# Set to true to allow connections to local-end server from
+# other LAN IP addresses
+allow-lan: false
+
+# This is only applicable when `allow-lan` is `true`
+# '*': bind all IP addresses
+# 192.168.122.11: bind a single IPv4 address
+# "[aaaa::a8aa:ff:fe09:57d8]": bind a single IPv6 address
+bind-address: '*'
+
+# Clash router working mode
+# rule: rule-based packet routing
+# global: all packets will be forwarded to a single endpoint
+# direct: directly forward the packets to the Internet
+mode: rule
+
+# Clash by default prints logs to STDOUT
+# info / warning / error / debug / silent
+log-level: info
+
+# When set to false, resolver won't translate hostnames to IPv6 addresses
+ipv6: false
+
+# RESTful web API listening address
+external-controller: 127.0.0.1:9090
+
+# A relative path to the configuration directory or an absolute path to a
+# directory in which you put some static web resource. Clash core will then
+# serve it at `${API}/ui`.
+# external-ui: folder
+
+# Secret for the RESTful API (optional)
+# Authenticate by spedifying HTTP header `Authorization: Bearer ${secret}`
+# ALWAYS set a secret if RESTful API is listening on 0.0.0.0
+# secret: ""
+
+# Outbound interface name
+# interface-name: en0
+
+
+
+# Static hosts for DNS server and connection establishment, only works
+# when `dns.enhanced-mode` is `redir-host`.
+#
+# Wildcard hostnames are supported (e.g. *.clash.dev, *.foo.*.example.com)
+# Non-wildcard domain names has a higher priority than wildcard domain names
+# e.g. foo.example.com > *.example.com > .example.com
+# P.S. +.foo.com equals to .foo.com and foo.com
+hosts:
+  '*.taobao.com': 223.5.5.5
+  '*.tmall.com': 223.5.5.5
+  '*.jd.com': 119.28.28.28
+  '*.qq.com': 119.28.28.28
+  '*.tencent.com': 119.28.28.28
+  '*.alicdn.com': 223.5.5.5
+  '*.aliyun.com': 223.5.5.5
+  '*.weixin.com': 119.28.28.28
+  '*.163.com': 119.29.29.29
+  '*.126.com': 119.29.29.29
+  '*.126.net': 119.29.29.29
+  '*.127.net': 119.29.29.29
+  '*.netease.com': 119.29.29.29
+  '*.mi.com': 119.29.29.29
+  '*.xiaomi.com': 119.29.29.29
+  '*.bilibili.com': 119.29.29.29
+  '*testflight.apple.com': 8.8.4.4
+  'mtalk.google.com': 108.177.125.188
+  'dl.google.com': 119.29.29.29
+  'dl.l.google.com': 119.29.29.29 
+
+
+# DNS server settings
+# This section is optional. When not present, DNS server will be disabled.
+dns:
+  enable: false
+  listen: 0.0.0.0:53
+  # ipv6: false # when false, response to AAAA questions will be empty
+
+  # These nameservers are used to resolve the DNS nameserver hostnames below.
+  # Specify IP addresses only
+  default-nameserver:
+    - 162.14.132.76
+  enhanced-mode: redir-host # or fake-ip
+  fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
+  
+  # Hostnames in this list will not be resolved with fake IPs
+  # i.e. questions to these domain names will always be answered with their
+  # real IP addresses
+  # fake-ip-filter:
+  #   - '*.lan'
+  #   - localhost.ptlogin2.qq.com
+  
+  # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
+  # All DNS questions are sent directly to the nameserver, without proxies
+  # involved. Clash answers the DNS question with the first result gathered.
+  nameserver:
+    - 162.14.132.76
+    # - tls://dns.rubyfish.cn:853 # DNS over TLS
+    - https://dh-dns.global-idc.net/dns-query # DNS over HTTPS
+
+  # When `fallback` is present, the DNS server will send concurrent requests
+  # to the servers in this section along with servers in `nameservers`.
+  # The answers from fallback servers are used when the GEOIP country
+  # is not `CN`.
+  #fallback:
+  #  - https://cloudflare-dns.com/dns-query
+
+  # If IP addresses resolved with servers in `nameservers` are in the specified
+  # subnets below, they are considered invalid and results from `fallback`
+  # servers are used instead.
+  #
+  # IP address resolved with servers in `nameserver` is used when
+  # `fallback-filter.geoip` is true and when GEOIP of the IP address is `CN`.
+  #
+  # If `fallback-filter.geoip` is false, results from `fallback` nameservers
+  # are always used, and answers from `nameservers` are discarded.
+  #
+  # This is a countermeasure against DNS pollution attacks.
+  #fallback-filter:
+  #  geoip: true
+  #  ipcidr:
+  #    # - 240.0.0.0/4
+
+
+
+# 代理节点
+#Proxy:
+proxies:
+# 支持的协议及加密算法示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
+
+#-------------------配置示例分割线---------------
+#  # Shadowsocks(Websocket + TLS)
+#  - name: "1"
+#    type: ss
+#    server: server
+#    port: 443
+#    cipher: chacha20-ietf-poly1305
+#    password: "password"
+#    plugin: v2ray-plugin
+#    plugin-opts:
+#      mode: websocket # no QUIC now
+#      tls: true # wss
+#      # skip-cert-verify: true
+#      # host: bing.com
+#      path: "/s"
+#      # mux: true
+#      # headers:
+#      #   custom: value
+#
+#  # VMess(Websocket + TLS)
+#  - name: "2"
+#    type: vmess
+#    server: v2ray.cool
+#    port: 443
+#    uuid: a3482e88-686a-4a58-8126-99c9df64b7bf
+#    alterId: 32
+#    cipher: auto
+#    # udp: true
+#    tls: true
+#    # skip-cert-verify: true
+#    network: ws
+#    ws-path: /v
+#    # ws-headers:
+#    #   Host: v2ray.com
+#
+#  # Trojan
+#  - name: "3"
+#    type: trojan
+#    server: server
+#    port: 443
+#    password: yourpsk
+#    # udp: true
+#    # sni: example.com # aka server name
+#    # alpn:
+#    #   - h2
+#    #   - http/1.1
+#    # skip-cert-verify: true
+
+# 配置开始
+
+  #- name: "trojan_tc"
+  #  type: trojan
+  #  server: dogshome.ddns.net
+  #  port: 443
+  #  password: d1c015e3
+  #  skip-cert-verify: true
+
+  #- name: "trojan_tcc2"
+  #  type: trojan
+  #  server: kfcat.zapto.org
+  #  port: 443
+  #  password: XKmbeAzpF5DRa9gl
+  #  skip-cert-verify: true
+
+  - name: "oracle"
+    type: trojan
+    server: seven7.ddns.net
+    port: 443
+    password: ONno4fuvqvlepiyQ
+    skip-cert-verify: true
+
+  - name: "us"
+    type: trojan
+    server: usugaki.ssss.monster
+    port: 443
+    password: U87PH7QQTEEMVAT8
+
+  - name: "jp"
+    type: trojan
+    server: mokuba.ssss.monster
+    port: 443
+    password: U87PH7QQTEEMVAT8
+
+  - name: "md"
+    type: trojan
+    server: yoroppa.ssss.monster
+    port: 443
+    password: U87PH7QQTEEMVAT8
+
+
+
+
+## 服务器节点订阅
+#proxy-providers:
+#  # name: # Provider 名称
+#  #   type: http # http 或 file
+#  #   path: # 文件路径
+#  #   url: # 只有当类型为 HTTP 时才可用，您不需要在本地空间中创建新文件。
+#  #   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
+#  #   health-check: # 健康检查选项从此处开始
+#  #     enable:
+#  #     url: 
+#  #     interval: 
+#
+#  #
+#  # 「url」参数填写订阅链接
+#  #
+#  # 订阅链接可以使用 API 进行转换，如：https://sub.dler.io/
+#  #
+#  # 1.模式选择「进阶模式」 2.填写订阅链接 3.勾选「输出为 Node List」 4.「生成订阅#链接」
+#  #
+#
+#  # 此处只是订阅示例，如果没有订阅链接的使用需求，此处及 proxy-groups 的相关内容可删#除
+#
+#  DuckDuckGoList: #「冲鸭机场」订阅
+#    type: http
+#    url: "https://raw.githubusercontent.com/DivineEngine/Profiles/master/#Clash/ProxyList/List.yaml" # 放机场订阅链接
+#    interval: 3600
+#    path: ./Proxy/List.yaml # 注意此处文件名不可相同
+#    health-check:
+#      enable: true
+#      interval: 600
+#      url: http://www.gstatic.com/generate_204
+#
+#  # DuckDuckGoUS: #「冲鸭机场」订阅美国地区节点
+#  #   type: http
+#  #   url: "https://raw.githubusercontent.com/DivineEngine/Profiles/#master/Clash/ProxyList/US.yaml" # 放机场订阅链接
+#  #   interval: 3600
+#  #   path: ./Proxy/US.yaml # 注意此处文件名不可相同
+#  #   health-check:
+#  #     enable: true
+#  #     interval: 600
+#  #     url: http://www.gstatic.com/generate_204
+
+
+
+
+proxy-groups:
+# 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
+#
+# 策略组说明
+#
+# 「MATCH」类似 Surge 的「Final」，此处用于选择白名单模式(PROXY 策略)和黑名单模式(DIRECT 策略)
+#
+#
+# 「PROXY」是代理规则策略，它可以指定为某个节点或嵌套一个其他策略组，如：「自动测试」、「Fallback」或「负载均衡」的策略组，关于这 3 个策略组的具体示例可以看官方示例：https://github.com/Dreamacro/clash
+#
+
+  # 注意此处的「use」而不是「proxies」，当然也可以不用在此先嵌套一个策略组进行选择，可以直接使用，如
+  #
+  # # 代理节点选择
+  # - name: "PROXY"
+  #   type: select
+  #   use:
+  #     - DuckDuckGo # 嵌套使用订阅节点策略组
+  #   proxies:
+  #     - Fallback
+  #     - 1
+  #     - 2
+  #     - 3
+  #
+  # 但如果订阅节点很多选起来就很麻烦，不如先嵌套一个策略组进行手动或自动的选择。
+
+#  # 手动选择订阅节点
+#  - name: "DuckDuckGo"
+#    type: select # 亦可使用 fallback 或 load-balance
+#    use: # 注意此处是「use」
+#      - DuckDuckGoList # 这是上面「proxy-providers」的名称
+#
+#  # - name: "US"
+#  #   type: select # 亦可使用 fallback 或 load-balance
+#  #   use: # 注意此处是「use」
+#  #     - DuckDuckGoUS # 这是上面「proxy-providers」的名称
+#
+#  # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切#换到第二个，以此类推。
+#  - name: "Fallback"
+#    type: fallback
+#    proxies:
+#      - 1
+#      - 2
+#      - 3
+#    url: 'http://www.gstatic.com/generate_204'
+#    interval: 300
+#
+#  # 代理节点选择
+#  - name: "PROXY"
+#    type: select
+#    proxies:
+#      - Fallback
+#      - 1
+#      - 2
+#      - 3
+#      - DuckDuckGo # 嵌套使用订阅节点策略组
+#
+#  # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
+#  - name: "MATCH"
+#    type: select
+#    proxies:
+#      - PROXY
+#      - DIRECT
+#
+#  # 国际流媒体服务
+#  - name: "Streaming"
+#    type: select
+#    proxies:
+#      - PROXY
+#      - 1
+#      - 2
+#      - 3
+#      # - US
+
+
+# 代理节点选择
+
+  - name: "Fallback"
+    type: fallback
+    proxies:
+      - oracle
+      - us
+      - jp
+      - md
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 600
+
+  - name: "PROXY"
+    type: select
+    proxies:
+      - Fallback
+      - oracle
+      - us
+      - jp
+      - md
+
+  # 黑名单模式 DIRECT
+  - name: "MATCH"
+    type: select
+    proxies:
+      - DIRECT
+      - PROXY
+
+  - name: "Adblock"
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: "Apple"
+    type: select
+    proxies:
+      - DIRECT
+      - PROXY
+
+  - name: "AsianMedia"
+    type: select
+    proxies:
+      - PROXY
+      - REJECT
+      - DIRECT
+
+  - name: "Speedtest"
+    type: select
+    proxies:
+      - PROXY
+      - REJECT
+      - DIRECT
+
+  - name: "TikTok"
+    type: select
+    proxies:
+      - PROXY
+      - REJECT
+      - DIRECT
+
+  - name: "othersGlobal"
+    type: select
+    proxies:
+      - PROXY
+      - REJECT
+      - DIRECT
+
+  - name: "苹果更新"
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - PROXY
+
+  - name: "一般"
+    type: select
+    proxies:
+      - DIRECT
+      - PROXY
+
+  - name: "小说"
+    type: select
+    proxies:
+      - DIRECT
+      - PROXY
+
+
+
+# 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
+
+rule-providers:
+# name: # Provider 名称
+#   type: http # http 或 file
+#   behavior: classical # 或 ipcidr、domain
+#   path: # 文件路径
+#   url: # 只有当类型为 HTTP 时才可用，您不需要在本地空间中创建新文件。
+#   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
+
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    path: ./LocalAreaNetwork.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    interval: 604800
+
+  UnBan:
+    type: http
+    behavior: classical
+    path: ./UnBan.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+    interval: 604800
+
+  AppleUpdateBlock:
+    type: http
+    behavior: classical
+    path: ./SelfUse/AppleUpdateBlock.list
+    url: https://github.com/JakATom/DE_SSSProfile/raw/master/Clash/SelfUse/AppleUpdateBlock.list
+    interval: 604800
+
+  BanEasyList:
+    type: http
+    behavior: classical
+    path: ./BanEasyList.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list
+    interval: 604800
+
+  BanEasyListChina:
+    type: http
+    behavior: classical
+    path: ./BanEasyListChina.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
+    interval: 604800
+
+  BanEasyPrivacy:
+    type: http
+    behavior: classical
+    path: ./BanEasyPrivacy.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
+    interval: 604800
+
+  BanAD:
+    type: http
+    behavior: classical
+    path: ./BanAD.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    interval: 604800
+
+  BanProgramAD:
+    type: http
+    behavior: classical
+    path: ./BanProgramAD.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    interval: 604800
+
+  # -----自用规则---start----------------
+  TelegramC:
+    type: http
+    behavior: classical
+    path: ./SelfUse/TelegramC.list
+    url: https://github.com/JakATom/DE_SSSProfile/raw/master/Clash/SelfUse/TelegramC.list
+    interval: 604800
+
+  novels:
+    type: http
+    behavior: classical
+    path: ./SelfUse/novels.list
+    url: https://github.com/JakATom/DE_SSSProfile/raw/master/Clash/SelfUse/novels.list
+    interval: 604800
+
+  othersGlobal:
+    type: http
+    behavior: classical
+    path: ./SelfUse/othersGlobal.list
+    url: https://github.com/JakATom/DE_SSSProfile/raw/master/Clash/SelfUse/othersGlobal.list
+    interval: 604800
+
+  AdBlockC:
+    type: http
+    behavior: classical
+    path: ./SelfUse/AdBlock.list
+    url: https://github.com/JakATom/DE_SSSProfile/raw/master/Clash/SelfUse/AdBlock.list
+    interval: 604800
+  # -----自用规则---end----------------
+
+  Steam:
+    type: http
+    behavior: classical
+    path: ./Steam.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Steam.list
+    interval: 604800
+
+  Epic:
+    type: http
+    behavior: classical
+    path: ./Epic.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Epic.list
+    interval: 604800
+
+  YouTube:
+    type: http
+    behavior: classical
+    path: ./YouTube.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/YouTube.list
+    interval: 604800
+
+  Netflix:
+    type: http
+    behavior: classical
+    path: ./Netflix.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Netflix.list
+    interval: 604800
+
+  Pornhub:
+    type: http
+    behavior: classical
+    path: ./Pornhub.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Pornhub.list
+    interval: 604800
+
+  Telegram:
+    type: http
+    behavior: classical
+    path: ./Telegram.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    interval: 604800
+
+  PayPal:
+    type: http
+    behavior: classical
+    path: ./PayPal.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/PayPal.list
+    interval: 604800
+
+  OneDrive:
+    type: http
+    behavior: classical
+    path: ./OneDrive.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list
+    interval: 604800
+
+  Global:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Global.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Global.yaml
+    interval: 604800
+
+  China:
+    type: http
+    behavior: classical
+    path: ./RuleSet/China.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
+    interval: 604800
+
+  ChinaIP:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/Extra/ChinaIP.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
+    interval: 604800
+
+
+
+# 规则
+rules:
+
+  - RULE-SET, LocalAreaNetwork, DIRECT
+
+  - RULE-SET, UnBan, DIRECT
+
+  - RULE-SET, AppleUpdateBlock, 苹果更新
+
+  - RULE-SET, BanEasyList, Adblock
+
+  - RULE-SET, BanEasyListChina, Adblock
+
+  - RULE-SET, BanEasyPrivacy, Adblock
+
+  - RULE-SET, BanAD, Adblock
+
+  - RULE-SET, BanProgramAD, Adblock
+
+  - RULE-SET, TelegramC, PROXY
+  - RULE-SET, novels, 小说
+  - RULE-SET, othersGlobal, othersGlobal
+  - RULE-SET, AdBlockC, Adblock
+
+  - RULE-SET, Steam, PROXY
+  - RULE-SET, Epic, PROXY
+
+  - RULE-SET, TikTok, TikTok
+
+  - RULE-SET, YouTube, PROXY
+
+  - RULE-SET, Netflix, PROXY
+
+  - RULE-SET, Pornhub, PROXY
+
+  - RULE-SET, Telegram, PROXY
+ 
+  - RULE-SET, PayPal, PROXY
+
+  - RULE-SET, OneDrive, PROXY
+
+  - RULE-SET, Global, PROXY
+  - RULE-SET,China,DIRECT
+
+
+  # 本地规则
+  - DOMAIN-SUFFIX,huawei.com, DIRECT
+
+  # 一般，默认：直接连接
+  - DOMAIN-SUFFIX,52pojie.cn,一般
+  - DOMAIN-SUFFIX,notion.so,一般
+
+  # >Local Area Network 局域网
+  - DOMAIN-SUFFIX, local, DIRECT
+  - IP-CIDR, 192.168.0.0/16, DIRECT
+  - IP-CIDR, 10.0.0.0/8, DIRECT
+  - IP-CIDR, 172.16.0.0/12, DIRECT
+  - IP-CIDR, 127.0.0.0/8, DIRECT
+  - IP-CIDR, 100.64.0.0/10, DIRECT
+  - IP-CIDR, 224.0.0.0/24, DIRECT
+  - IP-CIDR, 169.254.0.0/16, DIRECT
+  - IP-CIDR6, fe80::/10, DIRECT
+
+  # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
+  # - RULE-SET,ChinaIP,DIRECT
+  
+  # > GeoIP China
+  - GEOIP,CN,DIRECT
+
+  - MATCH,MATCH
