@@ -211,32 +211,6 @@ proxies:
   #  password: XKmbeAzpF5DRa9gl
   #  skip-cert-verify: true
 
-  - name: "oracle"
-    type: trojan
-    server: seven7.ddns.net
-    port: 443
-    password: ONno4fuvqvlepiyQ
-    skip-cert-verify: true
-
-  - name: "us"
-    type: trojan
-    server: usugaki.ssss.monster
-    port: 443
-    password: U87PH7QQTEEMVAT8
-
-  - name: "jp"
-    type: trojan
-    server: mokuba.ssss.monster
-    port: 443
-    password: U87PH7QQTEEMVAT8
-
-  - name: "md"
-    type: trojan
-    server: yoroppa.ssss.monster
-    port: 443
-    password: U87PH7QQTEEMVAT8
-
-
 
 
 ## 服务器节点订阅
