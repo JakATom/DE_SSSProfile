@@ -1,3 +1,4 @@
+payload:
   # 小说，默认：直接连接
   - DOMAIN, m.sobiquge.com
   - DOMAIN, m.biquge.info
