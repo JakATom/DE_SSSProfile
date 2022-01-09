@@ -35,7 +35,7 @@ DOMAIN, apis.live.net
 DOMAIN, www.fitnesspointapp.com
 DOMAIN, streaksworkout.app
 DOMAIN, discourse.devontechnologies.com
-DOMAIN, www.v2ex.com
+DOMAIN-SUFFIX, v2ex.com
 DOMAIN-SUFFIX, evernote.com
 DOMAIN-SUFFIX, timegate.vip
 DOMAIN-SUFFIX, dnvodcdn.me
