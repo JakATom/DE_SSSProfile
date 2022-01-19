@@ -19,7 +19,6 @@ DOMAIN, client.relay.crisp.chat
 DOMAIN-SUFFIX, devontechnologies.com
 DOMAIN, forums.getdrafts.com
 DOMAIN-SUFFIX, substack.com
-DOMAIN, rizime.substack.com
 DOMAIN, use.fontawesome.com
 DOMAIN-SUFFIX, tradingview.com
 DOMAIN-SUFFIX, arkoselabs.com
@@ -49,9 +48,7 @@ DOMAIN, www.macstories.net
 DOMAIN, coda.io
 DOMAIN, thesweetsetup.com
 DOMAIN-SUFFIX, packtpub.com
-DOMAIN, account.packtpub.com
 DOMAIN, static.packt-cdn.com
-DOMAIN, www.packtpub.com
 DOMAIN, github.githubassets.com
 DOMAIN, merlinblog.xyz
 DOMAIN, api.perfalytics.com
@@ -68,3 +65,5 @@ DOMAIN, api.bmpi.dev
 DOMAIN-SUFFIX, hcaptcha.com
 DOMAIN, cdnjs.cloudflare.com
 DOMAIN, maxcdn.bootstrapcdn.com
+DOMAIN, v2rayssr.com
+IP-CIDR, 161.8.184.133/32
