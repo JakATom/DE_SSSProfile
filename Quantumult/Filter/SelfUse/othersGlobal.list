@@ -67,3 +67,4 @@ DOMAIN, cdnjs.cloudflare.com
 DOMAIN, maxcdn.bootstrapcdn.com
 DOMAIN, v2rayssr.com
 IP-CIDR, 161.8.184.133/32
+DOMAIN-SUFFIX, rackcdn.com
