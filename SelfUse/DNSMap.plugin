@@ -1,0 +1,96 @@
+# https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonPlugin/DNSMap.plugin
+# 将doh服务器改为ipv4 dns，将默认dns改为119.29.29.29
+
+[Host]
+## 米忽悠
+*.bh3.com = server:119.29.29.29
+*.mihoyo.com = server:119.29.29.29
+*.yuanshen.com = server:119.29.29.29
+*-os.yuanshen.com = server:119.29.29.29
+## 阿里系
+*.taobao.com = server:223.5.5.5
+*.tmall.com = server:223.5.5.5
+*.alipay.com = server:223.5.5.5
+*.alicdn.com = server:223.5.5.5
+*.aliyun.com = server:223.5.5.5
+*.aliyundrive.com = server:223.5.5.5
+## 腾讯系
+*.qq.com = server:119.29.29.29
+*.tencent.com = server:119.29.29.29
+*.weixin.com = server:119.29.29.29
+*.wechat.com = server:119.29.29.29
+*.tenpay.com = server:119.29.29.29
+*.weiyun.com = server:119.29.29.29
+*.gtimg.cn = server:119.29.29.29
+*.idqqimg.com = server:119.29.29.29
+*.gcloudsdk.com = server:119.29.29.29
+## bilibili
+*.bilibili.com = server:119.29.29.29
+*.bilivideo.com = server:119.29.29.29
+*.bilivideo.cn = server:119.29.29.29
+*.hdslb.com = server:119.29.29.29
+*.b23.tv = server:119.29.29.29
+b23.tv = server:119.29.29.29
+*.biliapi.net = server:119.29.29.29
+*.static.geetest.com = server:119.29.29.29
+## sina
+*.weibo.com = server:119.29.29.29
+*.miaopai.com = server:119.29.29.29
+weibo.com = server:119.29.29.29
+*.weibo.cn = server:119.29.29.29
+*.weibocdn.com = server:119.29.29.29
+*.sinaimg.com = server:119.29.29.29
+*.miaopai.com = server:119.29.29.29
+*.sina.com.cn = server:119.29.29.29
+*.sinajs.cn = server:119.29.29.29
+## zhihu
+*.zhihu.com = server:119.29.29.29
+*.zhimg.com = server:119.29.29.29
+*.csdn.com = server:119.29.29.29
+## sspai
+*.sspai.com = server:119.29.29.29
+## 喜马拉雅
+*.xmcdn.com = server:119.29.29.29
+*.ximalaya.com = server:119.29.29.29
+## xiaomi
+*.xiaomi.com = server:119.29.29.29
+*.mi.com = server:119.29.29.29
+*.miwifi.com = server:119.29.29.29
+# douban
+*.douban.com = server:119.29.29.29
+*.doubanio.com = server:119.29.29.29
+*.douc.cc = server:119.29.29.29
+## baidu
+*.baidu.com = server:119.29.29.29
+*.bdimg.com = server:119.29.29.29
+*.bdstatic.com = server:119.29.29.29
+*.bcebos.com = server:119.29.29.29
+## nga
+*.ngacn.cc = server:119.29.29.29
+*.178.com = server:119.29.29.29
+## jd
+*.jd.com = server:119.29.29.29
+*.jdcloud.com = server:119.29.29.29
+*.jd.hk = server:119.29.29.29
+## 爱奇艺
+*.iqiyi.com = server:119.29.29.29
+*.qiyi.com = server:119.29.29.29
+*.iqiyipic.com = server:119.29.29.29
+*.qiyipic.com = server:119.29.29.29
+*.ppsimg.com = server:119.29.29.29
+## 其他
+*.163.com = server:119.29.29.29
+*.126.com = server:119.29.29.29
+*.126.net = server:119.29.29.29
+*.127.net = server:119.29.29.29
+*.95516.com = server:119.29.29.29
+*.netease.com = server:119.29.29.29
+*.caiyunapp.com = server:119.29.29.29
+*.ithome.com = server:119.29.29.29
+*.abchina.com = server:119.29.29.29
+*.10010.com = server:119.29.29.29
+*.10010.cn = server:119.29.29.29
+*.gov.cn = server:119.29.29.29
+*.sohu.com = server:119.29.29.29
+## 全局
+*.cn = server:119.29.29.29
