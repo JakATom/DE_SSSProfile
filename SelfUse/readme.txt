@@ -1,0 +1,3 @@
+#
+*.txt for Clash
+*.list for QX/loon
