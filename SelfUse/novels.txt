@@ -1,16 +1,17 @@
 payload:
 # 小说，默认：直接连接
-  - DOMAIN, m.sobiquge.com
-  - DOMAIN, m.biquge.info
-  - DOMAIN, m.booktxt.net
-  - DOMAIN, www.ddyueshu.com
-  - DOMAIN, wap.xdingdiann.com
-  - DOMAIN, m.dushuge.net
-  - DOMAIN, www.23us.la
-  - DOMAIN, m.23us.la
-  - DOMAIN, m.shuge.net
-  - DOMAIN, m.shuquge.com
-  - DOMAIN, m.biqugevip.com
-  - DOMAIN, m.99mk.com
-  - DOMAIN, m.x23us.us
-  - DOMAIN, wap.xbiquge.la
+  - '+.m.sobiquge.com'
+  - '+.m.biquge.info'
+  - '+.m.booktxt.net'
+  - '+.www.ddyueshu.com'
+  - '+.wap.xdingdiann.com'
+  - '+.m.dushuge.net'
+  - '+.www.23us.la'
+  - '+.m.23us.la'
+  - '+.m.shuge.net'
+  - '+.m.shuquge.com'
+  - '+.m.biqugevip.com'
+  - '+.m.99mk.com'
+  - '+.m.x23us.us'
+  - '+.wap.xbiquge.la'
+  
