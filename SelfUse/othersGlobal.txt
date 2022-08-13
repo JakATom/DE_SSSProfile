@@ -1,81 +1,78 @@
 payload:
 # othersGlobal: 默认：代理
-  - DOMAIN-SUFFIX, buff.ly
-  - DOMAIN, perfalytics.com
-  - DOMAIN-SUFFIX, noip.com
-  - DOMAIN-SUFFIX, gravatar.com
-  - DOMAIN, dayoneapp.com
-  - DOMAIN-SUFFIX, netlify.com
-  - DOMAIN, forum.freemdict.com
-  - USER-AGENT, Clubhouse*
-  - DOMAIN-KEYWORD, clubhouse
-  - DOMAIN, www.zfnn.com
-  - DOMAIN, ajax.cloudflare.com
-  - DOMAIN, stackpath.bootstrapcdn.com
-  - DOMAIN, wp.jinxiart.com
-  - DOMAIN, voice.telephony.goog
-  - DOMAIN, netflav.com
-  - DOMAIN, limbopro.xyz
-  - DOMAIN, client.relay.crisp.chat
-  - DOMAIN-SUFFIX, devontechnologies.com
-  - DOMAIN, forums.getdrafts.com
-  - DOMAIN-SUFFIX, substack.com
-  - DOMAIN, use.fontawesome.com
-  - DOMAIN-SUFFIX, tradingview.com
-  - DOMAIN-SUFFIX, arkoselabs.com
-  - DOMAIN-SUFFIX, dubox.com
-  - DOMAIN-SUFFIX, ifttt.com
-  - DOMAIN, api-iam.intercom.io
-  - DOMAIN, www.digit77.com
-  - DOMAIN-SUFFIX, yandex.com
-  - DOMAIN, app.feed1x.com
-  - DOMAIN, 404museum.com
-  - DOMAIN, www.namesilo.com
-  - DOMAIN, apis.live.net
-  - DOMAIN, www.fitnesspointapp.com
-  - DOMAIN, streaksworkout.app
-  - DOMAIN, discourse.devontechnologies.com
-  - DOMAIN-SUFFIX, v2ex.com
-  - DOMAIN-SUFFIX, evernote.com
-  - DOMAIN-SUFFIX, timegate.vip
-  - DOMAIN-SUFFIX, dnvodcdn.me
-  - DOMAIN-SUFFIX, miolive.tv
-  - DOMAIN-SUFFIX, ifun.tv
-  - DOMAIN-SUFFIX, wyav.tv
-  - DOMAIN-SUFFIX, ifvod.tv
-  - DOMAIN-KEYWORD, amazon
-  - DOMAIN, fanqiang.network
-  - DOMAIN-SUFFIX, macstories.net
-  - DOMAIN, coda.io
-  - DOMAIN, thesweetsetup.com
-  - DOMAIN-SUFFIX, packtpub.com
-  - DOMAIN, static.packt-cdn.com
-  - DOMAIN, github.githubassets.com
-  - DOMAIN, merlinblog.xyz
-  - DOMAIN, api.perfalytics.com
-  - DOMAIN, d3ezh8unnmkdru.cloudfront.net
-  - DOMAIN, w37fhy.com
-  - DOMAIN, englishpod.com
-  - DOMAIN, meet-napolly.btp.ac.id
-  - DOMAIN, chi.privateinternetaccess.com
-  - DOMAIN-SUFFIX, ifsp.tv
-  - DOMAIN, www.mhnew.xyz
-  - DOMAIN, www.ewhaxiu.com
-  - DOMAIN, www.playpcesor.com
-  - DOMAIN, api.bmpi.dev
-  - DOMAIN-SUFFIX, hcaptcha.com
-  - DOMAIN, cdnjs.cloudflare.com
-  - DOMAIN, maxcdn.bootstrapcdn.com
-  - DOMAIN, v2rayssr.com
-  - IP-CIDR, 161.8.184.133/32
-  - DOMAIN-SUFFIX, rackcdn.com
-  - DOMAIN, api.amplitude.com
-  - DOMAIN, anchor.fm
-  - DOMAIN, m.hanman.cyou
-  - DOMAIN, tingtalk.me
-  - DOMAIN, cdn.jsdelivr.net
-  - DOMAIN-SUFFIX, disquscdn.com
-  - DOMAIN, busuanzi.ibruce.info
-  - DOMAIN, anchor.fm
-  - DOMAIN-SUFFIX, getdrafts.com
-  - DOMAIN, telegra.ph
+  - '+.buff.ly'
+  - '+.perfalytics.com'
+  - '+.noip.com'
+  - '+.gravatar.com'
+  - '+.dayoneapp.com'
+  - '+.netlify.com'
+  - '+.forum.freemdict.com'
+  - '+.www.zfnn.com'
+  - '+.ajax.cloudflare.com'
+  - '+.stackpath.bootstrapcdn.com'
+  - '+.wp.jinxiart.com'
+  - '+.voice.telephony.goog'
+  - '+.netflav.com'
+  - '+.limbopro.xyz'
+  - '+.client.relay.crisp.chat'
+  - '+.devontechnologies.com'
+  - '+.forums.getdrafts.com'
+  - '+.substack.com'
+  - '+.use.fontawesome.com'
+  - '+.tradingview.com'
+  - '+.arkoselabs.com'
+  - '+.dubox.com'
+  - '+.ifttt.com'
+  - '+.api-iam.intercom.io'
+  - '+.www.digit77.com'
+  - '+.yandex.com'
+  - '+.app.feed1x.com'
+  - '+.404museum.com'
+  - '+.www.namesilo.com'
+  - '+.apis.live.net'
+  - '+.www.fitnesspointapp.com'
+  - '+.streaksworkout.app'
+  - '+.discourse.devontechnologies.com'
+  - '+.v2ex.com'
+  - '+.evernote.com'
+  - '+.timegate.vip'
+  - '+.dnvodcdn.me'
+  - '+.miolive.tv'
+  - '+.ifun.tv'
+  - '+.wyav.tv'
+  - '+.ifvod.tv'
+  - '+.fanqiang.network'
+  - '+.macstories.net'
+  - '+.coda.io'
+  - '+.thesweetsetup.com'
+  - '+.packtpub.com'
+  - '+.static.packt-cdn.com'
+  - '+.github.githubassets.com'
+  - '+.merlinblog.xyz'
+  - '+.api.perfalytics.com'
+  - '+.d3ezh8unnmkdru.cloudfront.net'
+  - '+.w37fhy.com'
+  - '+.englishpod.com'
+  - '+.meet-napolly.btp.ac.id'
+  - '+.chi.privateinternetaccess.com'
+  - '+.ifsp.tv'
+  - '+.www.mhnew.xyz'
+  - '+.www.ewhaxiu.com'
+  - '+.www.playpcesor.com'
+  - '+.api.bmpi.dev'
+  - '+.hcaptcha.com'
+  - '+.cdnjs.cloudflare.com'
+  - '+.maxcdn.bootstrapcdn.com'
+  - '+.v2rayssr.com'
+  - '+.rackcdn.com'
+  - '+.api.amplitude.com'
+  - '+.anchor.fm'
+  - '+.m.hanman.cyou'
+  - '+.tingtalk.me'
+  - '+.cdn.jsdelivr.net'
+  - '+.disquscdn.com'
+  - '+.busuanzi.ibruce.info'
+  - '+.anchor.fm'
+  - '+.getdrafts.com'
+  - '+.telegra.ph'
+  
