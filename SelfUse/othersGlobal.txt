@@ -75,4 +75,5 @@ payload:
   - '+.anchor.fm'
   - '+.getdrafts.com'
   - '+.telegra.ph'
+  - '+.typeform.com'
   
