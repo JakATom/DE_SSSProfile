@@ -59,7 +59,7 @@ payload:
   - '+.www.mhnew.xyz'
   - '+.www.ewhaxiu.com'
   - '+.www.playpcesor.com'
-  - '+.api.bmpi.dev'
+  - '+.bmpi.dev'
   - '+.hcaptcha.com'
   - '+.cdnjs.cloudflare.com'
   - '+.maxcdn.bootstrapcdn.com'

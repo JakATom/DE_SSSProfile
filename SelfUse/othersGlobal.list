@@ -61,7 +61,7 @@ DOMAIN-SUFFIX, ifsp.tv
 DOMAIN, www.mhnew.xyz
 DOMAIN, www.ewhaxiu.com
 DOMAIN, www.playpcesor.com
-DOMAIN, api.bmpi.dev
+DOMAIN-SUFFIX, bmpi.dev
 DOMAIN-SUFFIX, hcaptcha.com
 DOMAIN, cdnjs.cloudflare.com
 DOMAIN, maxcdn.bootstrapcdn.com
