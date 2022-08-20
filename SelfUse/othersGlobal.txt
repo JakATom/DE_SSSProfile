@@ -76,4 +76,5 @@ payload:
   - '+.getdrafts.com'
   - '+.telegra.ph'
   - '+.typeform.com'
+  - '+.cccat.io'
   
