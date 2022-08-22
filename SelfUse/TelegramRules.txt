@@ -1,5 +1,4 @@
 # 手动 来源： https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/TelegramRules.conf
-
 #PROXY
 #USER-AGENT,?telegram*
 #USER-AGENT,com.nicegram.Telegram-iOS*
