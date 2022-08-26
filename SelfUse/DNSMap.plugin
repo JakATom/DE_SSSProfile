@@ -93,4 +93,4 @@ weibo.com = server:119.29.29.29
 *.gov.cn = server:119.29.29.29
 *.sohu.com = server:119.29.29.29
 ## 全局
-*.cn = server:119.29.29.29
+# *.cn = server:119.29.29.29
