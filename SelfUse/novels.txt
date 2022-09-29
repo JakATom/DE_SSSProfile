@@ -14,4 +14,4 @@ payload:
   - '+.m.99mk.com'
   - '+.m.x23us.us'
   - '+.wap.xbiquge.la'
-  
+  - '+.biqudu.net'  
