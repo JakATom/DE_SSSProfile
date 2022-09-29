@@ -77,4 +77,5 @@ payload:
   - '+.telegra.ph'
   - '+.typeform.com'
   - '+.cccat.io'
+  - '+.biqudu.net'
   
