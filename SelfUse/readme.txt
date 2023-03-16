@@ -1,3 +1,3 @@
 #
 *.txt for Clash
-*.list for QX/loon
+*.list for QX/loon/Shadow...
