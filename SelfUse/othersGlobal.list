@@ -86,6 +86,14 @@ DOMAIN, doub.dssrshare.us
 DOMAIN-SUFFIX, bulianglin.com
 DOMAIN,cf.buliang0.cf
 DOMAIN,www.morax-xyc.com
-
+#
+DOMAIN,chat.openai.com
+DOMAIN-SUFFIX,buzzsprout.com
+DOMAIN,chrt.fm
+DOMAIN,pdst.fm
+DOMAIN,rss.art19.com
+DOMAIN,content.production.cdn.art19.com
+DOMAIN-SUFFIX,producthunt.com
+DOMAIN,www.storm.mg
 
 
