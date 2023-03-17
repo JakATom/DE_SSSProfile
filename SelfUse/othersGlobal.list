@@ -69,17 +69,14 @@ DOMAIN, v2rayssr.com
 IP-CIDR, 161.8.184.133/32,no-resolve
 DOMAIN-SUFFIX, rackcdn.com
 DOMAIN, api.amplitude.com
-
 DOMAIN, anchor.fm
 DOMAIN, m.hanman.cyou
-
 DOMAIN, tingtalk.me
 DOMAIN, cdn.jsdelivr.net
 DOMAIN-SUFFIX, disquscdn.com
 DOMAIN, busuanzi.ibruce.info
 DOMAIN, anchor.fm
 DOMAIN-SUFFIX, getdrafts.com
-DOMAIN, telegra.ph
 DOMAIN-SUFFIX, typeform.com
 DOMAIN-SUFFIX, cccat.io
 DOMAIN, doub.dssrshare.us
