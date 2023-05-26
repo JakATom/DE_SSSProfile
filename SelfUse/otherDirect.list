@@ -7,7 +7,7 @@ DOMAIN-SUFFIX, musclewiki.com
 DOMAIN,www.siwenbook.com
 DOMAIN-SUFFIX, meta.appinn.net
 DOMAIN-SUFFIX, m.ptzw.com
-DOMAIN,docs.metacubex.one
+DOMAIN-SUFFIX, metacubex.one
 
 # Apple 推送通知 - 当使用 Apple 推送通知服务 (APNS) 时，Apple 设备需要访问以下主机。
 DOMAIN-SUFFIX, push.apple.com //推送通知
