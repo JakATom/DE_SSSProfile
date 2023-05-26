@@ -37,9 +37,7 @@ vi /etc/snell/snell-server.conf #修改Snell配置文件
 
 卸载Snell服务命令：
 
-wget --no-check-certificate -O uninstall-snell.sh https://raw.githubusercontent.com/primovist/snell.sh/master/uninstall-snell.sh
-chmod +x uninstall-snell.sh
-./uninstall-snell.sh
+wget --no-check-certificate -O uninstall-snell.sh https://raw.githubusercontent.com/JakATom/DE_SSSProfile/master/SelfUse/snell/uninstall-snell.sh && chmod +x uninstall-snell.sh && ./uninstall-snell.sh
 
 
 server app下载地址
