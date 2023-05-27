@@ -1,3 +1,5 @@
-# proxy为非国内地址
+# 站点会检查访问IP地址是否为CN。
+# 防止使用WARP时无法访问
 
 DOMAIN-SUFFIX,bulianglin.com
+DOMAIN,cf.buliang0.cf
