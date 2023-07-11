@@ -37,7 +37,9 @@ DOMAIN, hxy-ti.com
 DOMAIN-SUFFIX,lencr.org
 DOMAIN-SUFFIX,4rdq4l.com
 DOMAIN,m10011.com
-DOMAIN-SUFFIX,icloud-content.com
-DOMAIN,edge-098.hktko1.icloud-content.com
+
+# iCloud同步
+# DOMAIN-SUFFIX,icloud-content.com
+
 DOMAIN-SUFFIX,345678.biz
 
