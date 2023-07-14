@@ -10,6 +10,7 @@ DOMAIN-SUFFIX, m.ptzw.com
 DOMAIN-SUFFIX, metacubex.one
 DOMAIN-SUFFIX, ia.net
 DOMAIN-SUFFIX, shanghaidisneyresort.com
+DOMAIN-SUFFIX, app.skiff.com
 
 # Apple 推送通知 - 当使用 Apple 推送通知服务 (APNS) 时，Apple 设备需要访问以下主机。
 DOMAIN-SUFFIX, push.apple.com //推送通知
