@@ -89,5 +89,7 @@ DOMAIN,rss.art19.com
 DOMAIN,content.production.cdn.art19.com
 DOMAIN-SUFFIX,producthunt.com
 DOMAIN,www.storm.mg
-
+DOMAIN-SUFFIX, btnull.org
+DOMAIN-SUFFIX, btnull.to
+DOMAIN-SUFFIX, btnull.si
 
