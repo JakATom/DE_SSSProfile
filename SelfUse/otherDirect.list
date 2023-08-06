@@ -15,6 +15,7 @@ DOMAIN-SUFFIX, btnull.nu
 DOMAIN-SUFFIX, btnull.in
 DOMAIN-SUFFIX, btnull.fun
 DOMAIN-SUFFIX, cupfox.app
+DOMAIN-SUFFIX, wandou.la
 
 # Apple 推送通知 - 当使用 Apple 推送通知服务 (APNS) 时，Apple 设备需要访问以下主机。
 DOMAIN-SUFFIX, push.apple.com //推送通知
