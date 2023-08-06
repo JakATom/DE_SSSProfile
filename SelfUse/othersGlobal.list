@@ -1,4 +1,5 @@
-# othersGlobal: 默认：代理
+# othersGlobal: proxy
+# 
 DOMAIN-SUFFIX, buff.ly
 DOMAIN, perfalytics.com
 DOMAIN-SUFFIX, noip.com
@@ -89,7 +90,11 @@ DOMAIN,rss.art19.com
 DOMAIN,content.production.cdn.art19.com
 DOMAIN-SUFFIX,producthunt.com
 DOMAIN,www.storm.mg
+
+# video proxy
+#
 DOMAIN-SUFFIX, btnull.org
 DOMAIN-SUFFIX, btnull.to
 DOMAIN-SUFFIX, btnull.si
 
+#
