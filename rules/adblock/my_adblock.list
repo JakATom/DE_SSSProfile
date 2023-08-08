@@ -1,0 +1,57 @@
+# copy DE_SSSProfile/SelfUse/adblock.list
+
+# 广告拦截 自用
+
+DOMAIN, j8.jhdvsup.cn
+DOMAIN, www.qscxx.icu
+DOMAIN, zxc.yijiayi07.top
+DOMAIN, bbk6295.xiaodongjun.com
+DOMAIN, ip.ws.126.net
+DOMAIN, pic5.58cdn.com.cn
+DOMAIN, tg.xc7789.top
+DOMAIN-SUFFIX, szhszxfw.cn
+DOMAIN, img.jjxcslv.cn
+DOMAIN, as.kuanxin.top
+DOMAIN, j8.gzxnqkf.cn
+DOMAIN, as.kuanxin.top
+DOMAIN, wx.cquyzgjjc.top
+DOMAIN, sheilarosemary.com
+DOMAIN, janicelaura.com
+DOMAIN, sandrarene.com
+DOMAIN, yptc5.com
+DOMAIN, r3.o.lencr.org
+DOMAIN-SUFFIX, qlogo.cn
+DOMAIN, help.ifeng.com
+DOMAIN, filters.adtidy.org
+DOMAIN-SUFFIX,czsmac.com
+DOMAIN,zc.tiandesign.top
+DOMAIN,qc.tlin.top
+DOMAIN,sqngvd.com
+DOMAIN, cdn.bootcdn.net
+DOMAIN, bbk6295.xhzmjs.com
+DOMAIN, dd-static.jd.com
+DOMAIN, macnc.shenfire.cn
+DOMAIN, xyjiejie.com
+DOMAIN, zs.dingyar.top
+DOMAIN, qc.tlin.top
+DOMAIN, lib.baomitu.com
+DOMAIN, hxy-ti.com
+DOMAIN-SUFFIX,lencr.org
+DOMAIN-SUFFIX,4rdq4l.com
+DOMAIN,m10011.com
+DOMAIN-SUFFIX,345678.biz
+
+# https://ruleset.skk.moe/List/non_ip/my_reject.conf
+#
+DOMAIN,download.parallels.com
+DOMAIN,update.parallels.com
+DOMAIN,desktop.parallels.com
+DOMAIN,download.parallels.com.cdn.cloudflare.net
+DOMAIN,update.parallels.com.cdn.cloudflare.net
+DOMAIN,desktop.parallels.com.cdn.cloudflare.net
+DOMAIN-SUFFIX,parallels.cn
+DOMAIN,www.parallels.com
+DOMAIN,reportus.parallels.com
+DOMAIN,parallels.com
+DOMAIN-SUFFIX,myparallels.com
+DOMAIN-SUFFIX,my.parallels.com
