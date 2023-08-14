@@ -1,3 +1,4 @@
 # xiaomi 被拦截的
 DOMAIN-SUFFIX,app.chat.xiaomi.net
 DOMAIN-SUFFIX,tracking.miui.com
+DOMAIN-SUFFIX,ios.bugly.qq.com
