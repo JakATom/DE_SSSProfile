@@ -1,4 +1,18 @@
-# xiaomi 被拦截的
-DOMAIN-SUFFIX,app.chat.xiaomi.net
-DOMAIN-SUFFIX,tracking.miui.com
-#DOMAIN-SUFFIX,ios.bugly.qq.com
+# xiaomi/mijia 被拦截的
+DOMAIN,gateway.kefu.mi.com
+DOMAIN,api.io.mi.com 
+DOMAIN,restapi.amap.com 
+DOMAIN,app-measurement.com 
+DOMAIN,miot-spec.org 
+DOMAIN,h.trace.qq.com 
+DOMAIN,ios.bugly.qq.com 
+DOMAIN,api.m.mi.com 
+DOMAIN,mimc.chat.xiaomi.net 
+DOMAIN,tracking.miui.com
+DOMAIN-SUFFIX,mi.com
+DOMAIN-SUFFIX,amap.com 
+DOMAIN-SUFFIX,app-measurement.com 
+DOMAIN-SUFFIX,miot-spec.org 
+DOMAIN-SUFFIX,qq.com 
+DOMAIN-SUFFIX,xiaomi.net 
+DOMAIN-SUFFIX,miui.com
