@@ -38,8 +38,6 @@ DOMAIN-SUFFIX,ddg33.com
 DOMAIN-SUFFIX,ddg44.com
 DOMAIN-SUFFIX,ddg66.com
 DOMAIN-SUFFIX,rebozj.pro
-# add micro soft translator
-DOMAIN-SUFFIX,MICROSOFTTRANSLATOR.COM
 
 DOMAIN-SUFFIX,pipiya.me
 DOMAIN-SUFFIX,pipiya.cc
@@ -56,3 +54,6 @@ DOMAIN-SUFFIX,kuaikan-cdn2.com
 DOMAIN-SUFFIX,fileball.app
 DOMAIN-SUFFIX,dayone.app
 DOMAIN-SUFFIX,blanboom.org
+# add micro soft translator
+DOMAIN-SUFFIX,MICROSOFTTRANSLATOR.COM
+DOMAIN-SUFFIX,microsoft.com
