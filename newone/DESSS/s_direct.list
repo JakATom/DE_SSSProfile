@@ -56,3 +56,5 @@ DOMAIN-SUFFIX,blanboom.org
 # add micro soft translator
 DOMAIN-SUFFIX,MICROSOFTTRANSLATOR.COM
 DOMAIN-SUFFIX,microsoft.com
+# 
+DOMAIN-SUFFIX,zreading.cn
