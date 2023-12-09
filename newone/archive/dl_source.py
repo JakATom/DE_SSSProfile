@@ -18,7 +18,7 @@ current_path = os.path.dirname(os.path.abspath(__file__))
 # 时间戳 来用于生成文件夹
 time_now = time.strftime("%Y-%m-%d", time.localtime())
 
-# 生成随机时间，在0~60s之间，用于随机间隔抓取文件 - 太慢，删除
+# 生成随机时间，在0~60s之间，用于随机间隔抓取文件
 #
 
 # log对象
@@ -489,11 +489,28 @@ def gen_policy_file(dict_folder, root_folder):
     output_folder = os.path.join(root_folder, 'output_rules')
     os.path.exists(output_folder) or os.makedirs(output_folder)
 
-    # 去重1：优先direct，将proxy中重复的部分删除
-    # reject 目前只使用sogouinput.list，所以这里只用于去重
+    # >>> 2023.11.09 add: direct_set - desss_proxy
+    lst_proxy_dicts = dict_folder['proxy']
+    folders = [i for i in lst_proxy_dicts if 'desss' in i]
+    #print(folders)
+    desss_proxy_set = gen_ruleset_set(folders[0])
+    direct_set -= desss_proxy_set
+
+    # >>> 2023.11.09 add: proxy_set - desss_direct
+    lst_direct_dicts = dict_folder['direct']
+    folderss = [i for i in lst_direct_dicts if 'desss' in i]
+    desss_direct_set = gen_ruleset_set(folderss[0])
+    proxy_set -= desss_direct_set
+
+    ## ---- 2023.11.02 mod: proxy first, direct second.
+
+    ## 去重1：优先direct，将proxy中重复的部分删除
+    ## reject 目前只使用sogouinput.list，所以这里只用于去重
     proxy_set -= direct_set
+    #direct_set -= proxy_set
     proxy_set -= reject_set
     direct_set -= reject_set
+
 
     # save
     direct_file = os.path.join(output_folder, 'direct.list')
@@ -515,72 +532,170 @@ def gen_policy_file(dict_folder, root_folder):
     set_keyword_proxy -= set_keyword_direct
     set_suffix_proxy -= set_suffix_direct
     set_domain_proxy -= set_domain_direct
+    
+    ## ---- 2023.11.02 mod: sep file domain_direct.list to 3 files 
+    ## ---- 1: domain_direct_domain.list
+    ## ---- 2: domain_direct_suffix.list
+    ## ---- 3: domain_direct_keyword.list
+    ## ---- and same for .yaml
 
     # save
-    domain_file = os.path.join(output_folder, "domain_direct.list")
-    if not os.path.exists(domain_file):
-        with open(domain_file, 'w') as f:
+    #domain_file = os.path.join(output_folder, "domain_direct.list")
+    #if not os.path.exists(domain_file):
+    #    with open(domain_file, 'w') as f:
+    #        for i in set_keyword_direct:
+    #            ii = f"DOMAIN-KEYWORD,{i}\n"
+    #            f.write(ii)
+    #
+    #        for i in set_suffix_direct:
+    #            ii = f"DOMAIN-SUFFIX,{i}\n"
+    #            f.write(ii)
+    #
+    #        for i in set_domain_direct:
+    #            ii = f"DOMAIN,{i}\n"
+    #            f.write(ii)
+    file_domain_direct_domain = os.path.join(output_folder, "domain_direct_domain.list")
+    if not os.path.exists(file_domain_direct_domain):
+        with open(file_domain_direct_domain, 'w') as f:
+            for i in set_domain_direct:
+                ii = f"DOMAIN,{i}\n"
+                f.write(ii)
+    domain_direct_suffix = os.path.join(output_folder, "domain_direct_suffix.list")
+    if not os.path.exists(domain_direct_suffix):
+        with open(domain_direct_suffix, 'w') as f:
+            for i in set_suffix_direct:
+                ii = f"DOMAIN-SUFFIX,{i}\n"
+                f.write(ii)
+                 
+    domain_direct_keyword = os.path.join(output_folder, "domain_direct_keyword.list")
+    if not os.path.exists(domain_direct_keyword):
+        with open(domain_direct_keyword, 'w') as f:
             for i in set_keyword_direct:
                 ii = f"DOMAIN-KEYWORD,{i}\n"
                 f.write(ii)
 
-            for i in set_suffix_direct:
-                ii = f"DOMAIN-SUFFIX,{i}\n"
-                f.write(ii)
 
-            for i in set_domain_direct:
-                ii = f"DOMAIN,{i}\n"
-                f.write(ii)
 
-    domain_file = os.path.join(output_folder, "domain_proxy.list")
-    if not os.path.exists(domain_file):
-        with open(domain_file, 'w') as f:
-            for i in set_keyword_proxy:
-                ii = f"DOMAIN-KEYWORD,{i}\n"
-                f.write(ii)
-
-            for i in set_suffix_proxy:
-                ii = f"DOMAIN-SUFFIX,{i}\n"
-                f.write(ii)
-
+#    domain_file = os.path.join(output_folder, "domain_proxy.list")
+#    if not os.path.exists(domain_file):
+#        with open(domain_file, 'w') as f:
+#            for i in set_keyword_proxy:
+#                ii = f"DOMAIN-KEYWORD,{i}\n"
+#                f.write(ii)
+#
+#            for i in set_suffix_proxy:
+#                ii = f"DOMAIN-SUFFIX,{i}\n"
+#                f.write(ii)
+#
+#            for i in set_domain_proxy:
+#                ii = f"DOMAIN,{i}\n"
+#                f.write(ii)
+#
+    file_domain_proxy_domain = os.path.join(output_folder, "domain_proxy_domain.list")
+    if not os.path.exists(file_domain_proxy_domain):
+        with open(file_domain_proxy_domain, 'w') as f:
             for i in set_domain_proxy:
                 ii = f"DOMAIN,{i}\n"
                 f.write(ii)
-
+    
+    domain_proxy_suffix = os.path.join(output_folder, "domain_proxy_suffix.list")
+    if not os.path.exists(domain_proxy_suffix):
+        with open(domain_proxy_suffix, 'w') as f:
+            for i in set_suffix_proxy:
+                ii = f"DOMAIN-SUFFIX,{i}\n"
+                f.write(ii)
+    
+    domain_proxy_keyword = os.path.join(output_folder, "domain_proxy_keyword.list")
+    if not os.path.exists(domain_proxy_keyword):
+        with open(domain_proxy_keyword, 'w') as f:
+            for i in set_keyword_proxy:
+                ii = f"DOMAIN-KEYWORD,{i}\n"
+                f.write(ii)
+    
     # for Clash
-    domain_file = os.path.join(output_folder, "domain_direct.yaml")
-    if not os.path.exists(domain_file):
-        with open(domain_file, 'w') as f:
+#    domain_file = os.path.join(output_folder, "domain_direct.yaml")
+#    if not os.path.exists(domain_file):
+#        with open(domain_file, 'w') as f:
+#            f.write("payload:\n")
+#
+#            for i in set_keyword_direct:
+#                ii = f"  - DOMAIN-KEYWORD,{i}\n"
+#                f.write(ii)
+#
+#            for i in set_suffix_direct:
+#                ii = f"  - DOMAIN-SUFFIX,{i}\n"
+#                f.write(ii)
+#
+#            for i in set_domain_direct:
+#                ii = f"  - DOMAIN,{i}\n"
+#                f.write(ii)
+#
+#    domain_file = os.path.join(output_folder, "domain_proxy.yaml")
+#    if not os.path.exists(domain_file):
+#        with open(domain_file, 'w') as f:
+#            f.write("payload:\n")
+#
+#            for i in set_keyword_proxy:
+#                ii = f"  - DOMAIN-KEYWORD,{i}\n"
+#                f.write(ii)
+#
+#            for i in set_suffix_proxy:
+#                ii = f"  - DOMAIN-SUFFIX,{i}\n"
+#                f.write(ii)
+#
+#            for i in set_domain_proxy:
+#                ii = f"  - DOMAIN,{i}\n"
+#                f.write(ii)
+    
+    file_domain_direct_domain = os.path.join(output_folder, "domain_direct_domain.yaml")
+    if not os.path.exists(file_domain_direct_domain):
+        with open(file_domain_direct_domain, 'w') as f:
             f.write("payload:\n")
-
-            for i in set_keyword_direct:
-                ii = f"  - DOMAIN-KEYWORD,{i}\n"
-                f.write(ii)
-
-            for i in set_suffix_direct:
-                ii = f"  - DOMAIN-SUFFIX,{i}\n"
-                f.write(ii)
-
             for i in set_domain_direct:
                 ii = f"  - DOMAIN,{i}\n"
                 f.write(ii)
-
-    domain_file = os.path.join(output_folder, "domain_proxy.yaml")
-    if not os.path.exists(domain_file):
-        with open(domain_file, 'w') as f:
+    
+    domain_direct_suffix = os.path.join(output_folder, "domain_direct_suffix.yaml")
+    if not os.path.exists(domain_direct_suffix):
+        with open(domain_direct_suffix, 'w') as f:
             f.write("payload:\n")
-
-            for i in set_keyword_proxy:
-                ii = f"  - DOMAIN-KEYWORD,{i}\n"
-                f.write(ii)
-
-            for i in set_suffix_proxy:
+            for i in set_suffix_direct:
                 ii = f"  - DOMAIN-SUFFIX,{i}\n"
                 f.write(ii)
-
+    
+    domain_direct_keyword = os.path.join(output_folder, "domain_direct_keyword.yaml")
+    if not os.path.exists(domain_direct_keyword):
+        with open(domain_direct_keyword, 'w') as f:
+            f.write("payload:\n")
+            for i in set_keyword_direct:
+                ii = f"  - DOMAIN-KEYWORD,{i}\n"
+                f.write(ii)
+    
+    
+    file_domain_proxy_domain = os.path.join(output_folder, "domain_proxy_domain.yaml")
+    if not os.path.exists(file_domain_proxy_domain):
+        with open(file_domain_proxy_domain, 'w') as f:
+            f.write("payload:\n")
             for i in set_domain_proxy:
                 ii = f"  - DOMAIN,{i}\n"
                 f.write(ii)
+    
+    domain_proxy_suffix = os.path.join(output_folder, "domain_proxy_suffix.yaml")
+    if not os.path.exists(domain_proxy_suffix):
+        with open(domain_proxy_suffix, 'w') as f:
+            f.write("payload:\n")
+            for i in set_suffix_proxy:
+                ii = f"  - DOMAIN-SUFFIX,{i}\n"
+                f.write(ii)
+    
+    domain_proxy_keyword = os.path.join(output_folder, "domain_proxy_keyword.yaml")
+    if not os.path.exists(domain_proxy_keyword):
+        with open(domain_proxy_keyword, 'w') as f:
+            f.write("payload:\n")
+            for i in set_keyword_proxy:
+                ii = f"  - DOMAIN-KEYWORD,{i}\n"
+                f.write(ii)
+    
     log.logger.info(
         f"gen domain_direct.list & domain_proxy.list successfully.")
 
@@ -744,6 +859,25 @@ def push_github(rules_folder, repo_folder):
                 log.logger.debug(f'start to cp files to git repo path')
                 shutil.copy(source, target)
                 log.logger.info(f'{file} copied.')
+        
+        ## ---- 2023.12.10 add push source .py script to github
+        target_dl_source_py = os.path.join(repo_folder, 'newone', 'archive', 'dl_source.py')
+        dl_source_py = os.path.join(current_path, 'dl_source.py')
+
+        target_rules_yaml = os.path.join(repo_folder, 'newone', 'archive', 'rules.yaml')
+        rules_yaml = os.path.join(current_path, 'rules.yaml')
+        
+        log.logger.debug('start to cp dl_source.py to git repo path')
+        shutil.copy(dl_source_py, target_dl_source_py)
+        log.logger.info('dl_source.py copied.')
+        
+        log.logger.debug('start to cp rules.yaml to git repo path')
+        shutil.copy(rules_yaml, target_rules_yaml)
+        log.logger.info('rules.yaml copied.')
+
+        fils_git.append(target_dl_source_py)
+        fils_git.append(target_rules_yaml)
+        ## ---- 2023.12.10 add end.
 
         index.add(fils_git)
         index.commit(f'{time_now} rule files update.')
@@ -758,19 +892,25 @@ def push_github(rules_folder, repo_folder):
 
 def check_folders():
     """ 存储的数据大小，超过5天就删除否则删除旧的 """
+    log.logger.info('enter check_folders()')
 
     paths = os.listdir(current_path)
-    print(current_path)
+    #print(current_path)
 
     dirs = [p for p in paths if os.path.isdir(p)]
+    log.logger.info(f'dirs: {dirs}')
 
-    if len(dirs) > 5:
+    len_dirs = len(dirs)
+    MAX_DIRS = 5
+
+    if len_dirs > MAX_DIRS:
         dirs.sort(reverse=True)
-        print(dirs)
+        log.logger.info(f'len_dirs > {MAX_DIRS}')
         
-        for i in range(5-len(dirs), 0):
+        for i in range(MAX_DIRS-len_dirs, 0):
             # remove
             try:
+                log.logger.info('before shutil.rmtree.')
                 shutil.rmtree(os.path.join(current_path, dirs[i]))
                 log.logger.info(f'{os.path.join(current_path, dirs[i])} removed.')
             except Exception as e:
@@ -779,10 +919,78 @@ def check_folders():
             
     pass
 
+def create_asn_folder(folder):
+    """创建asn本地路径"""
+    # //
+    # - 2023-10-19
+    #     - acl4ssr
+    #     - ...
+    #     - asn
+    #         - asn.xxx.list
+    os.path.exists(folder) or os.makedirs(folder)
+    pass
+
+
+def download_asn_file(links_cn_asn, folder_asn):
+    """下载asn文件到本地"""
+
+    for url in links_cn_asn:
+        abs_file = os.path.join(folder_asn, url['name'])
+        log.logger.debug(abs_file)
+
+        if not os.path.exists(abs_file):
+            html_text = scrape_link(url['url'])
+            log.logger.debug(f"get {url['url']}")
+
+            if html_text is not None:
+                save_data(abs_file, html_text)
+                log.logger.debug(f"download {url['url']}")
+    pass
+
+
+def handle_asn(root_folder):
+    """处理asn文件，生成规则文件
+    root_folder：日期 目录
+    """
+    line_set = set()
+
+    re_pattern = re.compile(r'^IP-ASN,\s*(\d+)', re.I)
+
+    folder_asn = os.path.join(root_folder, 'asn')
+    for root, _, files in os.walk(folder_asn):
+        for file in files:
+            if not (file.endswith('.list') or file.endswith('.txt')):
+                log.logger.error(os.path.join(root, file))
+                continue
+
+            _file = os.path.join(root, file)
+            log.logger.debug(f'start to open file: {_file}')
+            with open(_file) as f:
+                # 逐行处理
+                for line in f:
+                    # 去除最后的换行符，然后手动增加换行符
+                    line = line.strip()
+                    line = line.upper()
+
+                    if line.startswith('IP-ASN'):
+                        l = re.search(re_pattern, line)
+                        line_set.add(l.group(1))
+                    else:
+                        continue
+    log.logger.info('asn handle ok.')
+    # save
+    output_folder = os.path.join(root_folder, 'output_rules')
+    os.path.exists(output_folder) or os.makedirs(output_folder)
+
+    output_file = os.path.join(output_folder, 'asn.cn.list')
+    with open(output_file, 'w') as f:
+        for line in line_set:
+            f.write(f"IP-ASN,{line},no-resolve\n")
+    log.logger.info('asn.cn.list generated.')
 
 if __name__ == '__main__':
 
-    # download rules to local
+    # # download rules to local
     config_file = os.path.join(current_path, 'rules.yaml')
     data = read_conf(config_file)
 
@@ -795,9 +1003,21 @@ if __name__ == '__main__':
     log.logger.info('begin to generate policy file')
     gen_policy_file(dict_folder, root_folder)
 
+    # ----2023.11.03 add: cn asn rules
+    folder_asn = os.path.join(root_folder, 'asn')
+    create_asn_folder(folder_asn)
+    
+    links_cn_asn = [
+        { 'name': 'ASN.China.list', 'url':'https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list'},
+        { 'name': 'auto.ASN.China.list', 'url':'https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/auto-update/ruleset/ASN.China.list'}
+    ]
+    download_asn_file(links_cn_asn, folder_asn)
+
+    handle_asn(root_folder)
+
     # push to github
     rules_folder = os.path.join(root_folder, 'output_rules')
-    repo_folder = '/Users/bulejames/Documents/git_dess'
+    repo_folder = '/root/dess'
     push_github(rules_folder, repo_folder)
 
     # 存储的数据大小，超过5天就删除否则删除旧的
@@ -807,14 +1027,14 @@ if __name__ == '__main__':
 
     # ---- 待添加的功能 --- to do
     # 日志logging记录  - done
-    # 存储的数据大小，超过5天就删除否则删除旧的 - done
+    # 存储的数据大小，超过5天就删除否则删除旧的
 
     # 集成git，直接提交到Github   - done
 
-    # 结果通知：1. email 2.telegram  - not do
+    # 结果通知：1. email 2.telegram
     # 1 is simple. so now choose it.
 
-    # ---- no，直接重新生成把，直接使用新的 - done
+    # ---- no，直接重新生成把，直接使用新的
     # 时间记录，记录上一次运行时生成的时间（上次用于生成规则目录），
     # 用于下一次 的文件比较，比较是否有刷新的规则
 

@@ -351,7 +351,7 @@ dalao:
 
 
 # domain-set规则。上面为rule-set规则。
-# 当前以rule-set为主。所以这里domain-set需要写全
+# 当前以rule-set为主。所以这里domain-set以全
 domain_set:
   direct:
     - 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list'
