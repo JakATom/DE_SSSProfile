@@ -2,7 +2,9 @@
 不用的
 文档
 
---- update 2023-12-10
+--- 
+> update 2023-12-10
+
 # 规则优化
 
 规则检查，www.notion.so会走proxy，奇怪！
@@ -17,7 +19,7 @@
 
 规则脚本自动提交刀git； --- done
 
-自动执行时无法删除文件夹原因（不行的话，删除这块改为shell脚本定时执行）
+自动执行时无法删除文件夹原因（不行的话，删除这块改为shell脚本定时执行） --- done
 - 在cron定时执行时，`dirs = [p for p in paths if os.path.isdir(p)]` 这里获取文件夹失败。cron定时器中，需要将`os.path.isdir`拼接为绝对路径。
 - 但是，单独执行该脚本，可以正常执行。
 
@@ -30,4 +32,4 @@ def check_folders():
     dirs = [p for p in paths if os.path.isdir(p)]
 ```
 
---- done
+
