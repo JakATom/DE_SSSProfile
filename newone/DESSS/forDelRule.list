@@ -1,1 +1,3 @@
-
+# 用于删除大佬规则中不要的规则
+# 在生成proxy和direct规则时，要删除这里的规则
+DOMAIN-SUFFIX,so
