@@ -894,8 +894,9 @@ def check_folders():
     """ 存储的数据大小，超过5天就删除否则删除旧的 """
     log.logger.info('enter check_folders()')
 
+    log.logger.info(f'before paths: {current_path}')
     paths = os.listdir(current_path)
-    #print(current_path)
+    log.logger.info(f'paths: {paths}')
 
     dirs = [p for p in paths if os.path.isdir(p)]
     log.logger.info(f'dirs: {dirs}')
