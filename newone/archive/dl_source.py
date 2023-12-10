@@ -214,7 +214,7 @@ def dl_rule_files(data, current_path):
     """ 下载rules文件到本地 """
 
     links = []
-    for policy in ('direct', 'proxy', 'reject'):
+    for policy in ('direct', 'proxy', 'reject', 'delete'):
         links.extend(get_links(data, policy))
         links.extend(get_domainset_links(data, policy))
 
