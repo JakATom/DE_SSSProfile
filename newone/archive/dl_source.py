@@ -56,7 +56,7 @@ def create_folders(data, current_path):
     # 增加domain-set目录, 这里添加会直接改变data的整体数据，不能使用
     # dalaos.append("domain_set")
 
-    for policy in ('direct', 'proxy', 'reject'):
+    for policy in ('direct', 'proxy', 'reject', 'delete'):
         # 用于存储规则文件夹path
         lst_folder = []
 
@@ -502,6 +502,13 @@ def gen_policy_file(dict_folder, root_folder):
     desss_direct_set = gen_ruleset_set(folderss[0])
     proxy_set -= desss_direct_set
 
+    ## ---- 2023.12.10 add: rules of delete: proxy_set - desss_delete, direct_set - desss_delete
+    lst_delete_dicts = dict_folder['delete']
+    foldersss = [i for i in lst_delete_dicts if 'desss' in i]
+    desss_delete_set = gen_ruleset_set(foldersss[0])
+    proxy_set -= desss_delete_set
+    direct_set -= desss_delete_set
+
     ## ---- 2023.11.02 mod: proxy first, direct second.
 
     ## 去重1：优先direct，将proxy中重复的部分删除
@@ -898,7 +905,10 @@ def check_folders():
     paths = os.listdir(current_path)
     log.logger.info(f'paths: {paths}')
 
-    dirs = [p for p in paths if os.path.isdir(p)]
+    ab_paths = [os.path.join(current_path, p) for p in paths]
+    log.logger.info(f'ab_paths: {ab_paths}')
+
+    dirs = [p for p in ab_paths if os.path.isdir(p)]
     log.logger.info(f'dirs: {dirs}')
 
     len_dirs = len(dirs)
@@ -906,7 +916,7 @@ def check_folders():
 
     if len_dirs > MAX_DIRS:
         dirs.sort(reverse=True)
-        log.logger.info(f'len_dirs > {MAX_DIRS}')
+        log.logger.info(f'sorted dirs: {dirs}')
         
         for i in range(MAX_DIRS-len_dirs, 0):
             # remove

@@ -348,6 +348,8 @@ dalao:
     - 's_proxy.list'
   reject:
     - 'sogouinput.list'
+  delete:
+    - 'forDelRule.list'
 
 
 # domain-set规则。上面为rule-set规则。
