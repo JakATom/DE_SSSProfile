@@ -24,13 +24,13 @@
                     "action": "deny",
                     "notes": "Sogou Input block list",
                     "process": "any",
-                    "destination": "oth.str.mdt.qq.com"
+                    "remote-hostnames": "oth.str.mdt.qq.com"
                 },
                 {
                     "action": "deny",
                     "notes": "Sogou Input block list",
                     "process": "any",
-                    "hostname": "otheve.beacon.qq.com"
+                    "remote-hostname": "otheve.beacon.qq.com"
                 },
                 {
                     "action": "deny",
