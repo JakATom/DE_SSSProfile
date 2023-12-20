@@ -1,23 +1,23 @@
 {
-    "description": "Sogou Input Block List from https://github.com/SukkaW/Surge",
+    "description": "Sogou Input Block List from https:\/\/github.com\/SukkaW\/Surge",
     "name": "Sogou Input Block List",
     "rules": [
                 {
                     "action": "deny",
                     "notes": "Sogou Input block list",
-                    "process": "/Library/Input Methods/SOgouTaskManager",
+                    "process": "\/Library\/Input Methods\/SOgouTaskManager",
                     "destination": "any"
                 },
                 {
                     "action": "deny",
                     "notes": "Sogou Input block list",
-                    "process": "/Library/Input Methods/SogouServices",
+                    "process": "\/Library\/Input Methods\/SogouServices",
                     "destination": "any"
                 },
                 {
                     "action": "deny",
                     "notes": "Sogou Input block list",
-                    "process": "/Library/Input Methods/SogouInput",
+                    "process": "\/Library\/Input Methods\/SogouInput",
                     "destination": "any"
                 },
                 {
