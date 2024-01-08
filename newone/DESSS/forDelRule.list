@@ -2,10 +2,23 @@
 # 在生成proxy和direct规则时，要删除这里的规则
 DOMAIN-SUFFIX,so
 # reddit 使用本地规则，走warp；直接走direct或者proxy会被阻断
-DOMAIN-SUFFIX,REDDITSTATIC.COM
-DOMAIN-SUFFIX,REDDITMAIL.COM
-DOMAIN-SUFFIX,REDDITLIST.COM
-DOMAIN-SUFFIX,REDDITUPLOADS.COM
-DOMAIN-SUFFIX,REDDIT.COM
-DOMAIN-SUFFIX,REDDITUPLOADS.COM.CDN-CF.BEHANCE.NET
-DOMAIN-SUFFIX,REDDITMEDIA.COM
+# 走warp的规则
+DOMAIN-SUFFIX,redditstatic.com
+DOMAIN-SUFFIX,redditmail.com
+DOMAIN-SUFFIX,redditlist.com
+DOMAIN-SUFFIX,reddituploads.com
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,reddituploads.com.cdn-cf.behance.net
+DOMAIN-SUFFIX,redditmedia.com
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,rte.ie
+DOMAIN-SUFFIX,poe.com
+
+# tor规则
+DOMAIN,pincong.rocks
+DOMAIN,program-think.blogspot.com
+DOMAIN,check.torproject.org
+DOMAIN-SUFFIX,torproject.org
+DOMAIN-SUFFIX,onion
+DOMAIN-SUFFIX,2047.one
+DOMAIN-SUFFIX,deepl.com
