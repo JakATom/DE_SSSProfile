@@ -1,0 +1,12 @@
+payload:
+# 走warp的规则
+  - DOMAIN-SUFFIX,redditstatic.com
+  - DOMAIN-SUFFIX,redditmail.com
+  - DOMAIN-SUFFIX,redditlist.com
+  - DOMAIN-SUFFIX,reddituploads.com
+  - DOMAIN-SUFFIX,reddit.com
+  - DOMAIN-SUFFIX,reddituploads.com.cdn-cf.behance.net
+  - DOMAIN-SUFFIX,redditmedia.com
+  - DOMAIN-SUFFIX,cloudflare.com
+  - DOMAIN-SUFFIX,rte.ie
+  - DOMAIN-SUFFIX,poe.com
