@@ -89,8 +89,9 @@ DOMAIN-SUFFIX,APPLE-ITUNES.CN
 DOMAIN-SUFFIX,APPLECOMPUTER.CN
 # vidhub
 DOMAIN-SUFFIX,api.player.omiapps.com
-
 #
 DOMAIN-SUFFIX,lizhi.io
 DOMAIN-SUFFIX,immersivetranslate.com
 DOMAIN-SUFFIX,supermemo.org
+#
+DOMAIN-SUFFIX,pdawiki.com
