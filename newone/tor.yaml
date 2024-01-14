@@ -1,7 +1,8 @@
 payload:
 # tor规则
-  - DOMAIN,pincong.rocks
+  - DOMAIN-SUFFIX,pincong.rocks
   - DOMAIN,program-think.blogspot.com
+  - DOMAIN-SUFFIX,blogspot.com
   - DOMAIN,check.torproject.org
   - DOMAIN-SUFFIX,torproject.org
   - DOMAIN-SUFFIX,onion
