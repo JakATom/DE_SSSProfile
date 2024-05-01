@@ -1,5 +1,6 @@
 payload:
 # tor规则
+# - DOMAIN-SUFFIX,deepl.com
   - DOMAIN-SUFFIX,pincong.rocks
   - DOMAIN,program-think.blogspot.com
   - DOMAIN-SUFFIX,blogspot.com
@@ -7,4 +8,4 @@ payload:
   - DOMAIN-SUFFIX,torproject.org
   - DOMAIN-SUFFIX,onion
   - DOMAIN-SUFFIX,2047.one
-  - DOMAIN-SUFFIX,deepl.com
+  
