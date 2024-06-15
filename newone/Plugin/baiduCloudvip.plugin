@@ -1,5 +1,5 @@
-#!name = 财新周刊VIP
-#!desc = 财新周刊VIP
+#!name = 百度网盘(倍速) 
+#!desc = 百度网盘(倍速) 
 #!openUrl = 
 #!author = ddgksf2013
 #!homepage = 
@@ -16,9 +16,9 @@
 # > https://github.com/ddgksf2013/dev/raw/master/ForOwnUse.conf
 ##############################################
 
-
 [Script]
-http-response http://ipadcms.caixin.com/tmp/articles script-path=https://github.com/ddgksf2013/dev/raw/main/CaiXinZhouKanProCrack.js, requires-body = true
+http-response ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id script-path=https://raw.githubusercontent.com/JakATom/DE_SSSProfile/newone/newone/js/baiduCloud.vip.js, requires-body = true
+
 
 [MitM]
-hostname = gateway.caixin.com, ipadcms.caixin.com
+hostname = pan.baidu.com
