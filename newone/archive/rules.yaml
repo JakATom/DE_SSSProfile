@@ -303,6 +303,20 @@ dalao:
     - 'Overcast/Overcast.list'
     - 'Peacock/Peacock.list'
     - 'BritboxUK/BritboxUK.list'
+# 2024-07-10：added apple rules to proxy
+    - 'AppStore/AppStore.list'
+    - 'iCloud/iCloud.list'
+    - 'iCloudPrivateRelay/iCloudPrivateRelay.list'
+    - 'TestFlight/TestFlight.list'
+    - 'AppleMail/AppleMail.list'
+    - 'AppleMusic/AppleMusic.list'
+    - 'AppleTV/AppleTV.list'
+    - 'Siri/Siri.list'
+    - 'Apple/Apple.list'
+    - 'Apple/Apple_Resolve.list'
+    - 'AppleID/AppleID.list'
+    - 'AppleNews/AppleNews.list'
+    - 'AppleMedia/AppleMedia.list'
 
 
 # Loyalsoldier/surge-rules
@@ -364,6 +378,7 @@ domain_set:
     - 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Global/Global_Domain.list'
     - 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Proxy/Proxy_Domain.list'
     - 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GlobalMedia/GlobalMedia_Domain.list'
+    - 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple_Domain.list'
 
 
 
