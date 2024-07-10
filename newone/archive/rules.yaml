@@ -1,3 +1,7 @@
+# updated:
+#     2024-07-10：由于最近网络以及苹果服务器的情况，将loyalsoldier的apple.txt和icloud.txt规则移到proxy
+#
+#
 # 注意！！！
 # 以下文件为 domian-set 格式 
 # 
@@ -307,15 +311,14 @@ dalao:
   direct:
     - 'direct.txt'
     - 'private.txt'
-    - 'apple.txt'
-    - 'icloud.txt'
     - 'cncidr.txt'
   proxy:
     - 'gfw.txt'
     - 'tld-not-cn.txt'
     - 'telegramcidr.txt'
     - 'proxy.txt'
-    
+    - 'apple.txt'
+    - 'icloud.txt'
 
 # ACL4SSR/ACL4SSR
 *acl4ssr:
