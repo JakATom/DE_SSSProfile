@@ -11,6 +11,7 @@ import timeit
 from log import Logger
 from git import Repo
 import shutil
+import json
 
 # 当前文件所在的路径
 current_path = os.path.dirname(os.path.abspath(__file__))
@@ -886,6 +887,29 @@ def push_github(rules_folder, repo_folder):
         fils_git.append(target_rules_yaml)
         ## ---- 2023.12.10 add end.
 
+        ## === 2024.8.9 add skk adblock 
+        log.logger.debug('start to cp skk_domain_reject: ls_reject_1.json to git repo path')
+        file_skk_domain_reject_1 = os.path.join(current_path, time_now, 'output_rules', 'ls_reject_1.json')
+        target_file_skk_domain_reject_1 = os.path.join(repo_folder, 'newone', 'LittleSnitch', 'ls_reject_1.json')
+        shutil.copy(file_skk_domain_reject_1, target_file_skk_domain_reject_1)
+        log.logger.info('skk_domain_reject: ls_reject_1.json copied.')
+        fils_git.append(target_file_skk_domain_reject_1)
+
+        log.logger.debug('start to cp skk_domain_reject: ls_reject_2.json to git repo path')
+        file_skk_domain_reject_2 = os.path.join(current_path, time_now, 'output_rules', 'ls_reject_2.json')
+        target_file_skk_domain_reject_2 = os.path.join(repo_folder, 'newone', 'LittleSnitch', 'ls_reject_2.json')
+        shutil.copy(file_skk_domain_reject_2, target_file_skk_domain_reject_2)
+        log.logger.info('skk_domain_reject: ls_reject_2.json copied.')
+        fils_git.append(target_file_skk_domain_reject_2)
+
+        log.logger.debug('start to cp skk_domain_reject: ls_ip_reject.json to git repo path')
+        file_skk_ls_ip_reject = os.path.join(current_path, time_now, 'output_rules', 'ls_ip_reject.json')
+        target_file_ls_ip_reject = os.path.join(repo_folder, 'newone', 'LittleSnitch', 'ls_ip_reject.json')
+        shutil.copy(file_skk_ls_ip_reject, target_file_ls_ip_reject)
+        log.logger.info('skk_domain_reject: ls_ip_reject.json copied.')
+        fils_git.append(target_file_ls_ip_reject)
+        ## === 2024.8.9 add end.
+
         index.add(fils_git)
         index.commit(f'{time_now} rule files update.')
         #
@@ -999,6 +1023,179 @@ def handle_asn(root_folder):
             f.write(f"IP-ASN,{line},no-resolve\n")
     log.logger.info('asn.cn.list generated.')
 
+
+## update: 2024-08-09 add sukaka's Adblock Rules Convert to Little Snitch
+## hard code!
+def dl_skk_adblock_ruls(root_path):
+
+    ## create folders
+    folder = os.path.join(root_path, 'skk_adblock')
+    os.path.exists(folder) or os.makedirs(folder)
+
+    output_folder = os.path.join(root_path, 'output_rules')
+    os.path.exists(output_folder) or os.makedirs(output_folder)
+
+    
+    ## download skk_rules
+    url_adb_domainset = 'https://ruleset.skk.moe/List/domainset/reject.conf'
+    file_domain = os.path.join(folder, 'skk_domain_reject.conf')
+    if not os.path.exists(file_domain):
+        html_text = scrape_link(url_adb_domainset)
+        if not html_text is None:
+            save_data(file_domain, html_text)
+
+    url_adb_ip = 'https://ruleset.skk.moe/List/ip/reject.conf'
+    file_ip = os.path.join(folder, 'skk_ip_reject.conf')
+    if not os.path.exists(file_ip):
+        html_text = scrape_link(url_adb_ip)
+        if not html_text is None:
+            save_data(file_ip, html_text)
+
+    ## handle ---
+
+    ## 从原规则文件获取DOMAIN-SET的规则
+    def gen_domainset_set(sfile):
+        """
+        input: source file of DOMAIN-SET rules
+        output: a set() includes all rules
+
+        转换规则：处理 DOMAIN-SET 类规则
+
+        DOMAIN-SET
+        为支持快速在千万级域名列表文件中搜索而设计。文件中的每一行都是一个域名，如果某一行以.开头，则匹配所有子域名和域名本身，等同于DOMAIN-SUFFIX；未以.开头，则匹配域名本身，等同于DOMAIN。
+
+        规则来源：https://ruleset.skk.moe/List/domainset/reject.conf
+        """
+        line_set = set()
+
+        with open(sfile) as f:
+            # 逐行处理
+            for line in f:
+                # 去除最后的换行符，然后手动增加换行符
+                line = line.strip()
+                line = line.lower()
+                # line += '\n'
+
+                # 去除注释行
+                if '#' in line:
+                    continue
+                elif ';' in line:
+                    continue
+                elif '//' in line:
+                    continue
+                # 去除空行
+                elif len(line) == 0:
+                    continue
+                # 
+                else:
+                    line_set.add(line)
+        log.logger.info("DOMAIN-SET rule_set generated ok.")
+        return line_set
+
+    def gen_ipcidr_set(sfile):
+        """
+        input: source file of IP-CIDR rules
+        output: a set() includes all rules
+
+        规则来源：https://ruleset.skk.moe/List/ip/reject.conf
+        """
+        line_set = set()
+
+        with open(sfile) as f:
+            # 逐行处理
+            for line in f:
+                # 去除最后的换行符，然后手动增加换行符
+                line = line.strip()
+                line = line.lower()
+                # line += '\n'
+
+                if line.startswith('ip-cidr'):
+                    line_set.add(line.replace(',no-resolve', '').replace('ip-cidr,', ''))
+                else:
+                    continue
+                
+        log.logger.info("IP-CIDR rule_set generated ok.")
+        return line_set
+
+    ## 转换规则
+    def convert_rules(rule_set):
+        """
+        input: a set() includes all rules
+        output: 
+        """
+
+        lst_rule = []
+
+        for rule in rule_set:
+            dict_rule = {}
+            dict_rule["action"] = "deny"
+            dict_rule["notes"] = "Reject Base"
+            dict_rule["process"] = "any"
+
+            # 处理 . 开头的域名
+            if rule.startswith('.'):
+                dict_rule["remote-domains"] = rule[1:]
+            else:
+                dict_rule["remote-hosts"] = rule
+
+            lst_rule.append(dict_rule)
+
+        log.logger.info("lst_rules generated ok.")
+        return lst_rule
+
+    def convert_ipcidr_rules(rule_set):
+
+        lst_rule = []
+
+        for rule in rule_set:
+            dict_rule = {}
+            dict_rule["action"] = "deny"
+            dict_rule["notes"] = "Anti Bogus Domain"
+            dict_rule["process"] = "any"
+            dict_rule["remote-addresses"] = rule
+
+            lst_rule.append(dict_rule)
+
+        log.logger.info("ipcidr lst_rules generated ok.")
+        return lst_rule
+
+    ## 生成Little Snitch规则文件
+    def save_ls_file(lst_rule, description, rule_name, output_file):
+        ls_rule = {}
+        ls_rule["description"] = description
+        ls_rule["name"] = rule_name
+        ls_rule["rules"] = lst_rule
+
+        with open(output_file, 'w') as f:
+            f.write(json.dumps(ls_rule))
+
+    ##
+    line_domain_set = gen_domainset_set(file_domain)
+    lst_domain_rules = list(line_domain_set)
+    lst_rule_1 = lst_domain_rules[:199999]
+    lst_rule_2 = lst_domain_rules[199999:]
+    lst_out_rule1 = convert_rules(lst_rule_1)
+    lst_out_rule2 = convert_rules(lst_rule_2)
+
+    output_file1 = os.path.join(output_folder, "ls_reject_1.json")
+    description = "The domainset supports AD blocking, tracking protection, privacy protection, anti-phishing, anti-mining  https://ruleset.skk.moe/List/domainset/reject.conf"
+    rule_name1 = "Sukka's Ruleset - Reject Base 1"
+    save_ls_file(lst_out_rule1, description, rule_name1, output_file1)
+
+    output_file2 = os.path.join(output_folder, "ls_reject_2.json")
+    rule_name2 = "Sukka's Ruleset - Reject Base 2"
+    save_ls_file(lst_out_rule2, description, rule_name2, output_file2)
+    ##
+
+    line_ip_set = gen_ipcidr_set(file_ip)
+    lst_out_rule = convert_ipcidr_rules(line_ip_set)
+    output_file = os.path.join(output_folder, 'ls_ip_reject.json')
+    description = "This file contains known addresses that are hijacking NXDOMAIN results returned by DNS servers, and botnet controller IPs."
+    rule_name = "Sukka's Ruleset - Anti Bogus Domain"
+
+    save_ls_file(lst_out_rule, description, rule_name, output_file)
+
+# main
 if __name__ == '__main__':
 
     # # download rules to local
@@ -1008,6 +1205,10 @@ if __name__ == '__main__':
     root_folder = os.path.join(current_path, time_now)
     dict_folder = create_folders(data, root_folder)
 
+    ## --- beg: call function about: skk adblock rules convertion
+    dl_skk_adblock_ruls(root_folder)
+    ## --- end
+    
     dl_rule_files(data, root_folder)
 
     # handle rules:
@@ -1028,7 +1229,9 @@ if __name__ == '__main__':
 
     # push to github
     rules_folder = os.path.join(root_folder, 'output_rules')
+    ## for remote VPS path
     # repo_folder = '/root/dess'
+    ## for local PC path
     repo_folder = '/Users/bulejames/Documents/ccDESSrules'
     push_github(rules_folder, repo_folder)
 
