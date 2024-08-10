@@ -1230,9 +1230,9 @@ if __name__ == '__main__':
     # push to github
     rules_folder = os.path.join(root_folder, 'output_rules')
     ## for remote VPS path
-    # repo_folder = '/root/dess'
+    repo_folder = '/root/dess'
     ## for local PC path
-    repo_folder = '/Users/bulejames/Documents/ccDESSrules'
+    #repo_folder = '/Users/bulejames/Documents/ccDESSrules'
     push_github(rules_folder, repo_folder)
 
     # 存储的数据大小，超过5天就删除否则删除旧的
@@ -1256,3 +1256,4 @@ if __name__ == '__main__':
     # 自己的规则库，用于定制化的规则  --- done
 
     pass
+
