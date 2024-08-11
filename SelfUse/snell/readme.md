@@ -17,7 +17,15 @@ Snell首次安装完成的默认端口号为：13254，如需修改，请在以�
 
 
 vim /etc/snell/snell-server.conf #编辑 Snell 配置文件
+```
+# cat /etc/snell/snell-server.conf
 
+[snell-server]
+listen = 127.0.0.1:7001
+psk = 2vvK1zJUimwFCDNE4L9A8b6xGlZTJJ3
+ipv6 = true
+obfs = off
+```
 systemctl restart snell #重启 Snell 服务器
 
 
