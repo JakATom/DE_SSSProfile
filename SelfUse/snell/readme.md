@@ -9,6 +9,7 @@ Debian & Ubuntu 用户依次执行命令：
 
 wget --no-check-certificate -O snell.sh https://raw.githubusercontent.com/JakATom/DE_SSSProfile/master/SelfUse/snell/snell.sh && chmod +x snell.sh && ./snell.sh
 
+wget --no-check-certificate -O snell3.sh https://raw.githubusercontent.com/JakATom/DE_SSSProfile/master/SelfUse/snell/snell.sh && chmod +x snell3.sh && ./snell3.sh
 
 
 修改Snell服务器运行端口
