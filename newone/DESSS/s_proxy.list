@@ -17,3 +17,4 @@ DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,apple.com
+DOMAIN,ocsp2.apple.com
