@@ -181,3 +181,11 @@ DOMAIN,API.BILIBILI.COM
 DOMAIN,API.BILIAPI.COM
 domain,blog.skk.moe
 DOMAIN-SUFFIX,wudangpai.com
+# from loon
+DOMAIN,deeplx.mingming.dev
+DOMAIN,ad.12306.cn
+DOMAIN,gg.caixin.com
+DOMAIN,sdkapp.uve.weibo.com
+DOMAIN-SUFFIX,ucweb.com
+DOMAIN,ntb.lanjie100.com
+DOMAIN-SUFFIX,kuwo.cn
