@@ -41,6 +41,7 @@ dalao:
     - 'ChinaMax/ChinaMax.list'
     - 'GitBook/GitBook.list'
     - 'GitLab/GitLab.list'
+    - 'ZhihuAds/ZhihuAds.list'
   proxy:
     - 'YouTube/YouTube.list'
     - 'Google/Google.list'
