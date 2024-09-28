@@ -1,0 +1,13 @@
+# LAN：默认false
+## LAN规则对应的地址已在「skip-proxy」「bypass-tun」添加。若要使LAN规则生效，请在「skip-proxy」「bypass-tun」删掉对应的地址。
+## 本该放在「本地规则」中，但是放在「订阅规则」中，可以方便快速地进行启用或关闭
+
+IP-CIDR, 10.0.0.0/8, no-resolve
+IP-CIDR, 100.64.0.0/10, no-resolve
+IP-CIDR, 172.16.0.0/12, no-resolve
+IP-CIDR, 192.0.0.0/24, no-resolve
+IP-CIDR, 192.168.0.0/16, no-resolve
+IP-CIDR, 198.18.0.0/15, no-resolve
+IP-CIDR6, ::1/128, no-resolve
+IP-CIDR6, fc00::/7, no-resolve
+IP-CIDR6, fe80::/10, no-resolve

@@ -1,0 +1,5 @@
+#  针对Loon的规则优先级「本地规则 > 插件中的规则 > 订阅规则」，将GEOIP,CN从本地规则调整到订阅规则中，使其优先级最低
+#
+# GEOIP,cn,CN_DR,no-resolve
+#
+GEOIP,cn,no-resolve

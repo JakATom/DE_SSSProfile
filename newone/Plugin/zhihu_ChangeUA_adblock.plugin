@@ -1,0 +1,27 @@
+#!name = 知乎ChangeUA去广告
+#!desc = 知乎ChangeUA（zZPiglet）
+#!tag = 去广告
+#!homepage = https://raw.githubusercontent.com/JakATom/DE_SSSProfile/newone/newone/Plugin/zhihu_ChangeUA_adblock.plugin
+#!date = 2024-09-04
+
+[Rewrite]
+# 知乎ChangeUA（zZPiglet）
+#^https?:\/\/www\.zhihu\.com header-replace User-Agent Mozilla/5.0\x20(iPhone;\x20CPU\x20iPhone\x20OS\x2013_5\x20like\x20Mac\x20OS\x20X)\x20AppleWebKit/605.1.15\x20(KHTML,\x20like\x20Gecko)\x20Version/13.1.1\x20Mobile/15E148\x20Safari/16C50\x20Quark/604.1\x20T7/10.3\x20SearchCraft/2.6.3\x20(Baidu;\x20P1\x208.0.0)
+
+# 知乎ChangeUA（来自Chrome Xr模式）
+^https?:\/\/www\.zhihu\.com header-replace User-Agent Mozilla/5.0\x20(iPhone;\x20CPU\x20iPhone\x20OS\x2016_6\x20like\x20Mac\x20OS\x20X)\x20AppleWebKit/605.1.15\x20(KHTML,\x20like\x20Gecko)\x20Version/16.6\x20Mobile/15E148\x20Safari/604.1
+
+# 知乎网页去广告&推荐列表
+https://www\.zhihu\.com/api/v4/questions/\d+/related-readings reject-200
+https://www\.zhihu\.com/api/v4/answers/\d+/related-readings reject-200
+https://www\.zhihu\.com/api/v4/hot_recommendation reject-200
+https://www\.zhihu\.com/commercial_api/banners_v3/mobile_banner reject-200
+https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation reject-200
+
+[Script]
+## 知乎直接看
+http-response ^https://www\.zhihu\.com/question/ script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js, requires-body=true, timeout=60, tag=知乎直接看1
+http-response ^https://zhuanlan\.zhihu\.com/p/ script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/zhihu.js, requires-body=true, timeout=60, tag=知乎直接看2
+
+[MITM]
+hostname = www.zhihu.com,zhuanlan.zhihu.com
