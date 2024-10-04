@@ -1,6 +1,17 @@
-# LAN：默认false
-## LAN规则对应的地址已在「skip-proxy」「bypass-tun」添加。若要使LAN规则生效，请在「skip-proxy」「bypass-tun」删掉对应的地址。
-## 本该放在「本地规则」中，但是放在「订阅规则」中，可以方便快速地进行启用或关闭
+# LAN：
+## ~~LAN规则对应的地址已在「skip-proxy」「bypass-tun」添加。若要使LAN规则生效，请在「skip-proxy」「bypass-tun」删掉对应的地址。~~
+## ~~本该放在「本地规则」中，但是放在「订阅规则」中，可以方便快速地进行启用或关闭~~
+
+## [Loon知识库](https://getupnote.com/share/notes/zSn1ShBmzNYISKcTgjXE5oHMrNf2/b6047d8b-621c-44af-bfa6-a28d35bcf928)
+## 问：为什么配置了绕过代理之后内网IP还是被代理了？
+## 答：因为TUN Only模式下没有HTTP Proxy模式，所以是没有效果的。如果你想避免一些内网IP被代理，可以添加IP类DIRECT规则来解决，或者使用热心网友编写好的[LAN规则集](https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Rule/LAN)并指派DIRECT策略。
+
+## 回家规则也是使用该LAN，所以，若需要则将LAN规则定一个独立的策略组，在家中Wi-Fi时走DIRECT，在外面时使用回家服务。
+
+#IP-CIDR, 28.0.0.1/8 // Clash.meta's Fake IP
+#IP-CIDR, 198.18.0.1/16 // Clash.meta's Fake IP
+#IP-CIDR, 198.18.0.0/15 // sing-box's Fake IP
+#IP-CIDR6, fc00::/18 // sing-box's Fake IP
 
 IP-CIDR, 10.0.0.0/8, no-resolve
 IP-CIDR, 100.64.0.0/10, no-resolve
