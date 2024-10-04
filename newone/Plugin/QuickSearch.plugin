@@ -53,6 +53,28 @@
 # gd = 高德地图
 ^https:\/\/duckduckgo\.com\/\?q=gd\+([^&]+).+ 302 iosamap://poi?sourceApplication=applicationName&name=$1
 
+## map = apple地图
+^https:\/\/duckduckgo\.com\/\?q=map\+([^&]+).+ 302 https://maps.apple.com/?q=$1
+
+## cc = ChatGPT
+^https:\/\/duckduckgo\.com\/\?q=cc\+([^&]+).+ 302 chatgpt://chatgpt.com/?q=$1
+
+
+## pp = perplexity
+^https:\/\/duckduckgo\.com\/\?q=pp\+([^&]+).+ 302 https://www.perplexity.ai/search?q=$1
+
+## dou = 豆瓣
+^https:\/\/duckduckgo\.com\/\?q=dou\+([^&]+).+ 302 https://m.douban.com/search/?query=$1
+
+## zhi = 知乎
+^https:\/\/duckduckgo\.com\/\?q=zhi\+([^&]+).+ 302 http://www.zhihu.com/search?q=$1
+
+## ssp = 少数派
+^https:\/\/duckduckgo\.com\/\?q=zhi\+([^&]+).+ 302 https://sspai.com/search/post/$1
+
+## sm = 什么值得买
+^https:\/\/duckduckgo\.com\/\?q=zhi\+([^&]+).+ 302 https://search.m.smzdm.com/?v=b&s=$1
+
 
 ## 一定放在最后！！！
 # 无快捷键则默认使用Google搜索
