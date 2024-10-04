@@ -61,7 +61,10 @@
 
 
 ## pp = perplexity
-^https:\/\/duckduckgo\.com\/\?q=pp\+([^&]+).+ 302 https://www.perplexity.ai/search?q=$1
+#^https:\/\/duckduckgo\.com\/\?q=pp\+([^&]+).+ 302 perplexity://www.perplexity.ai/search?q=$1
+
+## poe = poe
+#^https:\/\/duckduckgo\.com\/\?q=poe\+([^&]+).+ 302 poe://poe.com/?q=$1
 
 ## dou = 豆瓣
 ^https:\/\/duckduckgo\.com\/\?q=dou\+([^&]+).+ 302 https://m.douban.com/search/?query=$1
@@ -70,10 +73,10 @@
 ^https:\/\/duckduckgo\.com\/\?q=zhi\+([^&]+).+ 302 http://www.zhihu.com/search?q=$1
 
 ## ssp = 少数派
-^https:\/\/duckduckgo\.com\/\?q=zhi\+([^&]+).+ 302 https://sspai.com/search/post/$1
+^https:\/\/duckduckgo\.com\/\?q=ssp\+([^&]+).+ 302 https://sspai.com/search/post/$1
 
 ## sm = 什么值得买
-^https:\/\/duckduckgo\.com\/\?q=zhi\+([^&]+).+ 302 https://search.m.smzdm.com/?v=b&s=$1
+^https:\/\/duckduckgo\.com\/\?q=sm\+([^&]+).+ 302 https://search.m.smzdm.com/?v=b&s=$1
 
 
 ## 一定放在最后！！！
