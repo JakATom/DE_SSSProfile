@@ -64,10 +64,13 @@
 
 
 ## pp = perplexity
-#^https:\/\/duckduckgo\.com\/\?q=pp\+([^&]+).+ 302 perplexity://www.perplexity.ai/search?q=$1
+#^https:\/\/duckduckgo\.com\/\?q=pp\+([^&]+).+ 302 https://www.perplexity.ai/search?q=$1
+
+^https:\/\/duckduckgo\.com\/\?q=pp\+([^&]+).+ 302 perplexity://
 
 ## poe = poe
 #^https:\/\/duckduckgo\.com\/\?q=poe\+([^&]+).+ 302 poe://poe.com/?q=$1
+^https:\/\/duckduckgo\.com\/\?q=poe\+([^&]+).+ 302 poe://
 
 ## dou = 豆瓣
 ^https:\/\/duckduckgo\.com\/\?q=dou\+([^&]+).+ 302 https://m.douban.com/search/?query=$1
