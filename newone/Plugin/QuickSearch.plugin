@@ -51,7 +51,7 @@
 ^https:\/\/duckduckgo\.com\/\?q=jd\+([^&]+).+ 302 openjd://virtual?params=%7B%22des%22:%22productList%22,%22keyWord%22:%22$1%22,%22from%22:%22search%22,%22category%22:%22jump%22%7D
 
 ## pdd = 拼多多
-^https:\/\/duckduckgo\.com\/\?q=pdd\+([^&]+).+ 302 pinduoduo://com.xunmeng.pinduoduo/search_result?search_key=$1
+^https:\/\/duckduckgo\.com\/\?q=pdd\+([^&]+).+ 302 pinduoduo://com.xunmeng.pinduoduo/search_result.html?search_key=$1
 
 # gd = 高德地图
 ^https:\/\/duckduckgo\.com\/\?q=gd\+([^&]+).+ 302 iosamap://poi?sourceApplication=applicationName&name=$1
