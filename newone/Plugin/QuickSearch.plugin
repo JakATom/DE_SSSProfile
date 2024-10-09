@@ -84,6 +84,8 @@
 ## sm = 什么值得买
 ^https:\/\/duckduckgo\.com\/\?q=sm\+([^&]+).+ 302 https://search.m.smzdm.com/?v=b&s=$1
 
+## l = search.luxirty.com
+^https:\/\/duckduckgo\.com\/\?q=l\+([^&]+).+ 302 https://search.luxirty.com/search?q=$1
 
 ## 一定放在最后！！！
 # 无快捷键则默认使用Google搜索
