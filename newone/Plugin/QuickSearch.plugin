@@ -86,7 +86,11 @@
 
 ## l = search.luxirty.com
 ## 一个搜索引擎，基于 Google，屏蔽内容农场，无广告，无跟踪，干净，简洁，快(小声读书）
-^https:\/\/duckduckgo\.com\/\?q=l\+([^&]+).+ 302 Alook://https://search.luxirty.com/search?q=$1
+
+#^https:\/\/duckduckgo\.com\/\?q=l\+([^&]+).+ 302 Alook://https://search.luxirty.com/search?q=$1
+
+^https:\/\/duckduckgo\.com\/\?q=l\+([^&]+).+ 302 https://search.luxirty.com/search?q=$1
+
 
 ## 一定放在最后！！！
 # 无快捷键则默认使用Google搜索
