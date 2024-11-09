@@ -1,0 +1,100 @@
+#!name = 快捷搜索
+#!desc = 为Safari提供快速切换搜索引擎的能力，点击下方链接查看使用说明。
+#!openUrl = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Resource/Markdown/QuickSearch/README.md
+#!author = 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(749)
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Safari.png
+#!date = 2023-09-08 13:48:55
+
+[MitM]
+hostname = %APPEND% duckduckgo.com
+
+
+[URL Rewrite]
+# Safari内输入快捷键+空格+搜索关键词快速指定搜索引擎搜索
+# 先进入设置更改Safari默认搜索为DuckDuckGo
+
+
+
+
+# d = 百度搜索
+^https:\/\/duckduckgo\.com\/\?q=d\+([^&]+).+  https://www.baidu.com/s?wd=$1 302
+
+# dimg = 百度图片搜索
+^https:\/\/duckduckgo\.com\/\?q=dimg\+([^&]+).+ https://image.baidu.com/search/index?tn=baiduimage&word=$1 302
+
+# gimg = 谷歌图片搜索
+^https:\/\/duckduckgo\.com\/\?q=gimg\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
+
+# b = Bing搜索
+^https:\/\/duckduckgo\.com\/\?q=b\+([^&]+).+ https://www.bing.com/search?q=$1 302
+
+# wk = 维基搜索
+^https:\/\/duckduckgo\.com\/\?q=wk\+([^&]+).+  https://zh.wikipedia.org/wiki/$1 302
+
+# qm = 七麦搜索
+^https:\/\/duckduckgo\.com\/\?q=qm\+([^&]+).+ https://www.qimai.cn/search/index/country/cn/search/$1 302
+
+# gh = GitHub搜索
+^https:\/\/duckduckgo\.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
+
+# bl = 哔哩哔哩
+^https:\/\/duckduckgo\.com\/\?q=bl\+([^&]+).+ bilibili://search?keyword=$1 302
+
+# dt = DTTG
+^https:\/\/duckduckgo\.com\/\?q=dt\+([^&]+).+  x-devonthink://search?query=$1 302
+
+# tb = 淘宝
+^https:\/\/duckduckgo\.com\/\?q=tb\+([^&]+).+ taobao://s.taobao.com/?q=$1 302
+
+# jd = 京东
+^https:\/\/duckduckgo\.com\/\?q=jd\+([^&]+).+ openjd://virtual?params=%7B%22des%22:%22productList%22,%22keyWord%22:%22$1%22,%22from%22:%22search%22,%22category%22:%22jump%22%7D 302
+
+## pdd = 拼多多
+^https:\/\/duckduckgo\.com\/\?q=pdd\+([^&]+).+ pinduoduo://com.xunmeng.pinduoduo/search_result.html?search_key=$1 302
+
+# gd = 高德地图
+^https:\/\/duckduckgo\.com\/\?q=gd\+([^&]+).+ iosamap://poi?sourceApplication=applicationName&name=$1 302
+
+## map = apple地图
+^https:\/\/duckduckgo\.com\/\?q=map\+([^&]+).+ https://maps.apple.com/?q=$1 302
+
+## cc = ChatGPT
+^https:\/\/duckduckgo\.com\/\?q=cc\+([^&]+).+  chatgpt://chatgpt.com/?q=$1 302
+
+
+## pp = perplexity
+#^https:\/\/duckduckgo\.com\/\?q=pp\+([^&]+).+ 302 https://www.perplexity.ai/search?q=$1
+
+^https:\/\/duckduckgo\.com\/\?q=pp\+([^&]+).+ perplexity:// 302
+
+## poe = poe
+#^https:\/\/duckduckgo\.com\/\?q=poe\+([^&]+).+ 302 poe://poe.com/?q=$1
+^https:\/\/duckduckgo\.com\/\?q=poe\+([^&]+).+ poe:// 302
+
+## dou = 豆瓣
+^https:\/\/duckduckgo\.com\/\?q=dou\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+
+## zhi = 知乎
+^https:\/\/duckduckgo\.com\/\?q=zhi\+([^&]+).+  http://www.zhihu.com/search?q=$1 302
+
+## ssp = 少数派
+^https:\/\/duckduckgo\.com\/\?q=ssp\+([^&]+).+ https://sspai.com/search/post/$1 302
+
+## sm = 什么值得买
+^https:\/\/duckduckgo\.com\/\?q=sm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
+
+## l = search.luxirty.com
+## 一个搜索引擎，基于 Google，屏蔽内容农场，无广告，无跟踪，干净，简洁，快(小声读书）
+^https:\/\/duckduckgo\.com\/\?q=l\+([^&]+).+ Alook://https://search.luxirty.com/search?q=$1 302
+
+## 一定放在最后！！！
+# 无快捷键则默认使用Google搜索
+^https:\/\/duckduckgo\.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
+
+
+

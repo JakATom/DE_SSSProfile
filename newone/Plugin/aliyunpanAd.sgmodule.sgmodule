@@ -1,0 +1,28 @@
+#!name=阿里云盘去广告
+#!desc=移除首页的手机备份、时光设备间、会员促销、图搜、相册、视频、图书、文档等板块入口。
+#!author=RuCu6
+#!icon=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/AliYunDrive.png
+#!homepage=https://gitlab.com/lodepuly/vpn_tool//tree/master/Tool/Loon/Plugin
+#!date=2024-01-25 18:03:14
+
+[Rule]
+IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
+
+[Map Local]
+## 首页活动日历
+#^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_info data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+#^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_info url reject-dict
+^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+## 首页板块入口
+^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+[Script]
+## 移除阿里云盘广告
+AliYunDrive_remove_ads = type=http-response, pattern=^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body=true, max-size=-1, timeout=60
+
+AliYunDrive_remove_ads = type=http-response, pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.alipan.com, member.alipan.com
