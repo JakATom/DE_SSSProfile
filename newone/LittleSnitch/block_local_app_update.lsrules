@@ -437,12 +437,6 @@
       "action" : "deny",
       "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
       "remote" : "any",
-      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/Parallels Service.app\/Contents\/MacOS\/prl_disp_service"
-    },
-    {
-      "action" : "deny",
-      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
-      "remote" : "any",
       "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_updater_ctl"
     },
     {
