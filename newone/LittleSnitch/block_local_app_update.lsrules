@@ -96,29 +96,6 @@
     },
     {
       "action" : "deny",
-      "process" : "\/Volumes\/Parallels Desktop 17\/Install.app\/Contents\/MacOS\/Install",
-      "remote" : "any",
-      "via" : "\/Volumes\/Parallels Desktop 17\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app"
-    },
-    {
-      "action" : "deny",
-      "process" : "\/Volumes\/Parallels Desktop 17\/Install.app\/Contents\/MacOS\/Install",
-      "remote" : "any"
-    },
-    {
-      "action" : "deny",
-      "process" : "\/Volumes\/Parallels Desktop Business Edition 15.1.2.47123 Crked | Digit77.com\/Install.app\/Contents\/MacOS\/Install",
-      "remote" : "any",
-      "via" : "\/Volumes\/Parallels Desktop Business Edition 15.1.2.47123 Crked | Digit77.com\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app"
-    },
-    {
-      "action" : "deny",
-      "process" : "path.private\/var\/folders\/*\/Install.app\/Contents\/MacOS\/Install",
-      "remote" : "any",
-      "via" : "\/Volumes\/Parallels Desktop 17.1.1-51537 by TNT\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app"
-    },
-    {
-      "action" : "deny",
       "process" : "\/Applications\/Loopback.app\/Contents\/MacOS\/Loopback",
       "remote" : "any"
     },
@@ -467,21 +444,6 @@
       "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
       "remote" : "any",
       "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_updater_ctl"
-    },
-    {
-      "action" : "deny",
-      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
-      "remote" : "any"
-    },
-    {
-      "action" : "deny",
-      "process" : "\/Users\/bulejames\/Desktop\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
-      "remote" : "any"
-    },
-    {
-      "action" : "deny",
-      "process" : "\/Volumes\/Parallels Desktop Business Edition 15.1.2.47123 Crked | Digit77.com\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
-      "remote" : "any"
     },
     {
       "action" : "deny",
