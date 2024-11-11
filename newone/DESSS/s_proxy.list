@@ -20,3 +20,6 @@ DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,apple.com
 DOMAIN,ocsp2.apple.com
+# macked
+DOMAIN-SUFFIX,dl.macked.homes
+DOMAIN-SUFFIX,dl.macked.app
