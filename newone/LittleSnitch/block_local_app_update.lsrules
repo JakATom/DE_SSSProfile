@@ -435,12 +435,6 @@
     },
     {
       "action" : "deny",
-      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
-      "remote" : "any",
-      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_updater_ctl"
-    },
-    {
-      "action" : "deny",
       "process" : "\/usr\/libexec\/rtcreportingd",
       "remote-hosts" : "pancake.apple.com"
     },
