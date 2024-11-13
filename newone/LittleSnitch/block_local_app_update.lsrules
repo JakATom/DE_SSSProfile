@@ -52,19 +52,19 @@
       "action" : "deny",
       "process" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
       "remote-hosts" : "update.googleapis.com",
-      "via" : "\/Applications\/Google Chrome.app\/Contents\/Frameworks\/Google Chrome Framework.framework\/Versions\/119.0.6045.159\/Helpers\/Google Chrome Helper.app\/Contents\/MacOS\/Google Chrome Helper"
+      "via" : "\/Applications\/Google Chrome.app\/Contents\/Frameworks\/Google Chrome Framework.framework\/Versions\/130.0.6723.117\/Helpers\/Google Chrome Helper.app\/Contents\/MacOS\/Google Chrome Helper"
     },
     {
       "action" : "deny",
       "process" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
       "remote-hosts" : "update.googleapis.com",
-      "via" : "\/Applications\/Google Chrome.app\/Contents\/Frameworks\/Google Chrome Framework.framework\/Versions\/96.0.4664.55\/Helpers\/Google Chrome Helper.app\/Contents\/MacOS\/Google Chrome Helper"
+      "via" : "\/Applications\/Google Chrome.app\/Contents\/Frameworks\/Google Chrome Framework.framework\/Versions\/130.0.6723.117\/Helpers\/Google Chrome Helper.app\/Contents\/MacOS\/Google Chrome Helper"
     },
     {
       "action" : "deny",
       "process" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
       "remote-domains" : "volceapplog.com",
-      "via" : "\/Applications\/Google Chrome.app\/Contents\/Frameworks\/Google Chrome Framework.framework\/Versions\/96.0.4664.55\/Helpers\/Google Chrome Helper.app\/Contents\/MacOS\/Google Chrome Helper"
+      "via" : "\/Applications\/Google Chrome.app\/Contents\/Frameworks\/Google Chrome Framework.framework\/Versions\/130.0.6723.117\/Helpers\/Google Chrome Helper.app\/Contents\/MacOS\/Google Chrome Helper"
     },
     {
       "action" : "deny",
@@ -76,11 +76,11 @@
       "action" : "deny",
       "process" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
       "remote" : "any",
-      "via" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/120.0.6077.0\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater"
+      "via" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/130.0.6723.117\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater"
     },
     {
       "action" : "deny",
-      "process" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/120.0.6077.0\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater",
+      "process" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/130.0.6723.117\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater",
       "remote" : "any",
       "via" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/121.0.6116.0\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater"
     },
