@@ -76,13 +76,13 @@
       "action" : "deny",
       "process" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
       "remote" : "any",
-      "via" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/130.0.6723.117\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater"
+      "via" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/131.0.6776.0\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater"
     },
     {
       "action" : "deny",
-      "process" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/130.0.6723.117\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater",
+      "process" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/131.0.6776.0\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater",
       "remote" : "any",
-      "via" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/121.0.6116.0\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater"
+      "via" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/131.0.6776.0\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater"
     },
     {
       "action" : "deny",
