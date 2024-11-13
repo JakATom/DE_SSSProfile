@@ -193,3 +193,5 @@ DOMAIN-SUFFIX,ikea.cn
 # notion
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,notionusercontent.com
+# 小众软件
+DOMAIN,meta.appinn.net
