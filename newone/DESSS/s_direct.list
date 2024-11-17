@@ -155,6 +155,12 @@ DOMAIN-SUFFIX,APPLESIRI.CN
 DOMAIN-SUFFIX,APPLE-DNS.CN
 DOMAIN-SUFFIX,APPLE-ITUNES.CN
 DOMAIN-SUFFIX,APPLECOMPUTER.CN
+# apple
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,apple.com
+DOMAIN,ocsp2.apple.com
+#
 DOMAIN,svipsvip.ffzy-online5.com
 # vidhub
 DOMAIN-SUFFIX,api.player.omiapps.com
