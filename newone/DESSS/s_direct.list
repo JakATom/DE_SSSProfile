@@ -131,7 +131,6 @@ DOMAIN-SUFFIX,MICROSOFTTRANSLATOR.COM
 DOMAIN-SUFFIX,microsoft.com
 # 
 DOMAIN-SUFFIX,zreading.cn
-DOMAIN-SUFFIX,cn
 DOMAIN-SUFFIX,cn.zaker.iphonepro
 DOMAIN-SUFFIX,dyxs31.com
 DOMAIN-SUFFIX,lizhi.shop
@@ -159,7 +158,6 @@ DOMAIN-SUFFIX,APPLECOMPUTER.CN
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,apple.com
-DOMAIN,ocsp2.apple.com
 #
 DOMAIN,svipsvip.ffzy-online5.com
 # vidhub
