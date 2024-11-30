@@ -92,6 +92,10 @@ hostname = %APPEND% duckduckgo.com
 ## 一个搜索引擎，基于 Google，屏蔽内容农场，无广告，无跟踪，干净，简洁，快(小声读书）
 ^https:\/\/duckduckgo\.com\/\?q=l\+([^&]+).+ Alook://https://search.luxirty.com/search?q=$1 302
 
+## e = 欧路词典
+^https:\/\/duckduckgo\.com\/\?q=e\+([^&]+).+ eudic://dict/$1 302
+
+
 ## 一定放在最后！！！
 # 无快捷键则默认使用Google搜索
 ^https:\/\/duckduckgo\.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
