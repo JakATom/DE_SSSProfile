@@ -1,5 +1,5 @@
 {
-  "description" : "block some apps update ",
+  "description" : "block some apps update : this rule is unused from 2024-12-28, because i split this large file to 2 files, one is only for block microsfot updated in Parallels Desktop, the other is for block other apps update.",
   "name" : "block_local_app_update",
   "rules" : [
     {
