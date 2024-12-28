@@ -1,0 +1,300 @@
+{
+  "description" : "block some apps update ",
+  "name" : "block_Parallels_Desktop_update",
+  "rules" : [
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-addresses" : "13.107.42.16",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-addresses" : "112.86.135.165",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-addresses" : "112.86.135.209",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-addresses" : "112.86.135.244",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-addresses" : "211.95.34.35",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-addresses" : "239.255.255.250",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "www.tm.v4.a.prd.aadg.akadns.net",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "img-s-msn-com.akamaized.net",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "cn.bing.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "s.cn.bing.net",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "s1.cn.bing.net",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "x1.c.lencr.org",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "login.live.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "displaycatalog.mp.microsoft.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "dmd.metaservices.microsoft.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "fe3cr.delivery.mp.microsoft.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "go.microsoft.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "msedge.api.cdp.microsoft.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "pti.store.microsoft.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "slscr.update.microsoft.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "storeedgefd.dsx.mp.microsoft.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "cxcs.microsoft.net",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "arc.msn.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "sb.scorecardresearch.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "onedsblobprdcus16.centralus.cloudapp.azure.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "onedsblobprdeus17.eastus.cloudapp.azure.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "onedscolprdcus02.centralus.cloudapp.azure.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "onedscolprdeus14.eastus.cloudapp.azure.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "onedscolprdwus08.westus.cloudapp.azure.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "onedscolprdwus09.westus.cloudapp.azure.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "settings-prod-cin-1.centralindia.cloudapp.azure.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "settings-prod-eus-1.eastus.cloudapp.azure.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "vmss-prod-wus.westus.cloudapp.azure.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "settings-win.data.microsoft.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "v10.events.data.microsoft.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "watson.events.data.microsoft.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "a-ring-fallback.msedge.net",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "t-ring.msedge.net",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "t-ring-fallback.msedge.net",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "wac-ring.msedge.net",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "assets.msn.cn",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "api.msn.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-domains" : "azure.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-domains" : "digicert.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-domains" : "licdn.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-domains" : "msftconnecttest.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-domains" : "skype.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-domains" : "windowsupdate.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-domains" : "msn.cn",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_naptd"
+    }
+  ]
+}
