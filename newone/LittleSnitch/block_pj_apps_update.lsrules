@@ -278,6 +278,55 @@
       "action" : "deny",
       "process" : "\/Applications\/Userscripts.app\/Contents\/PlugIns\/Userscripts-Mac-Safari-Extension.appex\/Contents\/MacOS\/Userscripts-Mac-Safari-Extension",
       "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/DockX.app\/Contents\/MacOS\/DockX",
+      "remote-hosts" : "weatherkit.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Fork.app\/Contents\/MacOS\/Fork",
+      "remote-hosts" : "in.appcenter.ms"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Fork.app\/Contents\/MacOS\/Fork",
+      "remote-domains" : "fork.dev"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Fork.app\/Contents\/MacOS\/Fork",
+      "remote-domains" : "githubusercontent.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "account.parallels.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/Parallels Service.app\/Contents\/MacOS\/prl_disp_service"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "desktop.parallels.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-domains" : "parallels.cn",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/Parallels Service.app\/Contents\/MacOS\/prl_disp_service"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-domains" : "parallels.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote" : "any",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_updater_ctl"
     }
+
   ]
 }
