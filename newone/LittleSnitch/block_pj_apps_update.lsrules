@@ -1,0 +1,332 @@
+{
+  "description" : "block some apps update ",
+  "name" : "block_local_app_update",
+  "rules" : [
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/每日英语听力.app\/Contents\/MacOS\/每日英语听力",
+      "remote-hosts" : "static.frdic.com",
+      "via" : "\/Applications\/每日英语听力.app\/Contents\/Frameworks\/每日英语听力 Helper.app\/Contents\/MacOS\/每日英语听力 Helper"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/App Cleaner 8.app\/Contents\/MacOS\/App Cleaner 8",
+      "remote-domains" : "nektony.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/System\/Library\/PrivateFrameworks\/AppStoreDaemon.framework\/Support\/appstoreagent",
+      "remote-hosts" : "xp.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Users\/bulejames\/Library\/Application Support\/com.metacubex.ClashX.meta\/.private_core\/com.metacubex.ClashX.ProxyConfigHelper.meta",
+      "remote-addresses" : "211.95.52.123"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/DEVONthink 3.app\/Contents\/MacOS\/DEVONthink 3",
+      "remote-domains" : "s3.amazonaws.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/DEVONthink 3.app\/Contents\/MacOS\/DEVONthink 3",
+      "remote-domains" : "devontechnologies.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Discord.app\/Contents\/MacOS\/Discord",
+      "remote-hosts" : "dl.discordapp.net"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/System\/Library\/PrivateFrameworks\/GameCenterFoundation.framework\/Versions\/A\/gamed",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
+      "remote-addresses" : "239.255.255.250"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
+      "remote-hosts" : "update.googleapis.com",
+      "via" : "\/Applications\/Google Chrome.app\/Contents\/Frameworks\/Google Chrome Framework.framework\/Versions\/130.0.6723.117\/Helpers\/Google Chrome Helper.app\/Contents\/MacOS\/Google Chrome Helper"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
+      "remote-hosts" : "update.googleapis.com",
+      "via" : "\/Applications\/Google Chrome.app\/Contents\/Frameworks\/Google Chrome Framework.framework\/Versions\/130.0.6723.117\/Helpers\/Google Chrome Helper.app\/Contents\/MacOS\/Google Chrome Helper"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
+      "remote-domains" : "volceapplog.com",
+      "via" : "\/Applications\/Google Chrome.app\/Contents\/Frameworks\/Google Chrome Framework.framework\/Versions\/130.0.6723.117\/Helpers\/Google Chrome Helper.app\/Contents\/MacOS\/Google Chrome Helper"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
+      "remote" : "any",
+      "via" : "\/usr\/bin\/curl"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
+      "remote" : "any",
+      "via" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/131.0.6776.0\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/131.0.6776.0\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater",
+      "remote" : "any",
+      "via" : "\/Users\/bulejames\/Library\/Application Support\/Google\/GoogleUpdater\/131.0.6776.0\/GoogleUpdater.app\/Contents\/MacOS\/GoogleUpdater"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/System\/Library\/PrivateFrameworks\/HelpData.framework\/Versions\/A\/Resources\/helpd",
+      "remote-domains" : "parallels.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/iGlance.app\/Contents\/MacOS\/iGlance",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Loopback.app\/Contents\/MacOS\/Loopback",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Users\/bulejames\/Library\/Application Support\/Loopback\/Loopback.app\/Contents\/MacOS\/Loopback",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Lunar.app\/Contents\/MacOS\/Lunar",
+      "remote-domains" : "paddle.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Lunar.app\/Contents\/MacOS\/Lunar",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/System\/Applications\/Mail.app\/Contents\/MacOS\/Mail",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/usr\/libexec\/mobileassetd",
+      "remote-hosts" : "gdmf.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/usr\/libexec\/mobileassetd",
+      "remote-hosts" : "xp.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/usr\/libexec\/nsurlsessiond",
+      "remote-hosts" : "mesu.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/usr\/libexec\/nsurlsessiond",
+      "remote-hosts" : "updates.cdn-apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/usr\/libexec\/rtcreportingd",
+      "remote-hosts" : "pancake.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Safari.app\/Contents\/MacOS\/Safari",
+      "remote-domains" : "volceapplog.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Snipaste.app\/Contents\/MacOS\/Snipaste",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/System\/Library\/CoreServices\/Software Update.app\/Contents\/Resources\/softwareupdated",
+      "remote-hosts" : "swcdn.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/System\/Library\/CoreServices\/Software Update.app\/Contents\/Resources\/softwareupdated",
+      "remote-hosts" : "swdist.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/System\/Library\/CoreServices\/Software Update.app\/Contents\/Resources\/softwareupdated",
+      "remote-hosts" : "swscan.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/System\/Library\/CoreServices\/Software Update.app\/Contents\/Resources\/softwareupdated",
+      "remote-hosts" : "xp.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/System\/Library\/CoreServices\/Software Update.app\/Contents\/Resources\/softwareupdated",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Library\/Input Methods\/Squirrel.app\/Contents\/MacOS\/Squirrel",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/System\/Applications\/Stocks.app\/Contents\/PlugIns\/StocksWidget.appex\/Contents\/MacOS\/StocksWidget",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Sublime Text.app\/Contents\/MacOS\/sublime_text",
+      "remote-hosts" : "download.sublimetext.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-addresses" : "17.253.84.123"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-addresses" : "17.253.84.125"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-addresses" : "17.253.84.251"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-addresses" : "17.253.114.125"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-addresses" : "17.253.114.253"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-addresses" : "76.223.12.1"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-hosts" : "gdmf.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-hosts" : "swscan.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-hosts" : "update.googleapis.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-hosts" : "www.nssurge.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-hosts" : "www.surge-activation.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-hosts" : "wns.notify.trafficmanager.net"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-hosts" : "xp.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-domains" : "bing123.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Surge.app\/Contents\/MacOS\/Surge",
+      "remote-domains" : "vercel.app"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/The Unarchiver.app\/Contents\/MacOS\/The Unarchiver",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Userscripts.app\/Contents\/PlugIns\/Userscripts-Mac-Safari-Extension.appex\/Contents\/MacOS\/Userscripts-Mac-Safari-Extension",
+      "remote" : "any"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/DockX.app\/Contents\/MacOS\/DockX",
+      "remote-hosts" : "weatherkit.apple.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Fork.app\/Contents\/MacOS\/Fork",
+      "remote-hosts" : "in.appcenter.ms"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Fork.app\/Contents\/MacOS\/Fork",
+      "remote-domains" : "fork.dev"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Fork.app\/Contents\/MacOS\/Fork",
+      "remote-domains" : "githubusercontent.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "account.parallels.com",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/Parallels Service.app\/Contents\/MacOS\/prl_disp_service"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-hosts" : "desktop.parallels.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-domains" : "parallels.cn",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/Parallels Service.app\/Contents\/MacOS\/prl_disp_service"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote-domains" : "parallels.com"
+    },
+    {
+      "action" : "deny",
+      "process" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_client_app",
+      "remote" : "any",
+      "via" : "\/Applications\/Parallels Desktop.app\/Contents\/MacOS\/prl_updater_ctl"
+    }
+
+  ]
+}

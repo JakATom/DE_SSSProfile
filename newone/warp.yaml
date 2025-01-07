@@ -10,7 +10,8 @@ payload:
   - DOMAIN-SUFFIX,cloudflare.com
   - DOMAIN-SUFFIX,rte.ie
   - DOMAIN-SUFFIX,poe.com
-
+  - DOMAIN-SUFFIX,wikipedia.org
+  
     ## AI
     # 2024-05-30 15:51:48
     # ChatGPT
