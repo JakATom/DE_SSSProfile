@@ -13,24 +13,24 @@ payload:
   - DOMAIN, httpdns-v6.gslb.yy.com
 
   # 抖音
-  - AND, ((DOMAIN-KEYWORD, api100-core-quic-), (DOMAIN-SUFFIX, amemv.com))
-  - AND, ((DOMAIN-KEYWORD, api100-normal-quic-), (DOMAIN-SUFFIX, amemv.com))
-  - AND, ((DOMAIN-KEYWORD, api100-normal-quic-aweme-), (DOMAIN-SUFFIX, amemv.com))
-  - AND, ((DOMAIN-KEYWORD, api100-quic-core-), (DOMAIN-SUFFIX, amemv.com))
-  - AND, ((DOMAIN-KEYWORD, api100-quic-normal-), (DOMAIN-SUFFIX, amemv.com))
-  - AND, ((DOMAIN-KEYWORD, frontier-aweme-), (AND, ((OR, ((DOMAIN-KEYWORD, -ipa.), (DOMAIN-KEYWORD, -ipainner.),   - (DOMAIN-KEYWORD, -origin.), (DOMAIN-KEYWORD, -ipainner-))), (OR, ((DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX,   - amemv.com))))))
-  - AND, ((DOMAIN-KEYWORD, frontier100-aweme), (DOMAIN-SUFFIX, amemv.com))
-  - AND, ((DOMAIN-KEYWORD, ma5-normal-), (DOMAIN-SUFFIX, zijieapi.com))
-  - AND, ((DOMAIN-KEYWORD, polaris5-normal-), (DOMAIN-SUFFIX, zijieapi.com))
-  - AND, ((DOMAIN-KEYWORD, webcast100-ws-c-), (DOMAIN-SUFFIX, amemv.com))
-  - AND, ((OR, ((DOMAIN-KEYWORD, tnc3-bjlgy), (DOMAIN-KEYWORD, tnc11-bjlgy))), (OR, ((DOMAIN-SUFFIX, bytedance),   - (DOMAIN-SUFFIX, zijieapi.com))))
-  - DOMAIN, frontier-aweme-hl.snssdk.com
-  - DOMAIN, frontier-aweme.snssdk.com
-  - DOMAIN, frontier-quic-test.bytedance.com
-  - AND, ((IP-CIDR, 110.249.199.75/32, no-resolve), (DEST-PORT, 6443))
-  - AND, ((IP-CIDR, 111.225.147.191/32, no-resolve), (DEST-PORT, 6443))
-  - AND, ((IP-CIDR, 111.63.61.101/32, no-resolve), (DEST-PORT, 6443))
-  - AND, ((IP-CIDR, 220.243.141.0/32, no-resolve), (DEST-PORT, 6443))
+  # - AND, ((DOMAIN-KEYWORD, api100-core-quic-), (DOMAIN-SUFFIX, amemv.com))
+  # - AND, ((DOMAIN-KEYWORD, api100-normal-quic-), (DOMAIN-SUFFIX, amemv.com))
+  # - AND, ((DOMAIN-KEYWORD, api100-normal-quic-aweme-), (DOMAIN-SUFFIX, amemv.com))
+  # - AND, ((DOMAIN-KEYWORD, api100-quic-core-), (DOMAIN-SUFFIX, amemv.com))
+  # - AND, ((DOMAIN-KEYWORD, api100-quic-normal-), (DOMAIN-SUFFIX, amemv.com))
+  # - AND, ((DOMAIN-KEYWORD, frontier-aweme-), (AND, ((OR, ((DOMAIN-KEYWORD, -ipa.), (DOMAIN-KEYWORD, -ipainner.),   - (DOMAIN-KEYWORD, -origin.), (DOMAIN-KEYWORD, -ipainner-))), (OR, ((DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX,   - amemv.com))))))
+  # - AND, ((DOMAIN-KEYWORD, frontier100-aweme), (DOMAIN-SUFFIX, amemv.com))
+  # - AND, ((DOMAIN-KEYWORD, ma5-normal-), (DOMAIN-SUFFIX, zijieapi.com))
+  # - AND, ((DOMAIN-KEYWORD, polaris5-normal-), (DOMAIN-SUFFIX, zijieapi.com))
+  # - AND, ((DOMAIN-KEYWORD, webcast100-ws-c-), (DOMAIN-SUFFIX, amemv.com))
+  # - AND, ((OR, ((DOMAIN-KEYWORD, tnc3-bjlgy), (DOMAIN-KEYWORD, tnc11-bjlgy))), (OR, ((DOMAIN-SUFFIX, bytedance),   - (DOMAIN-SUFFIX, zijieapi.com))))
+  # - DOMAIN, frontier-aweme-hl.snssdk.com
+  # - DOMAIN, frontier-aweme.snssdk.com
+  # - DOMAIN, frontier-quic-test.bytedance.com
+  # - AND, ((IP-CIDR, 110.249.199.75/32, no-resolve), (DEST-PORT, 6443))
+  # - AND, ((IP-CIDR, 111.225.147.191/32, no-resolve), (DEST-PORT, 6443))
+  # - AND, ((IP-CIDR, 111.63.61.101/32, no-resolve), (DEST-PORT, 6443))
+  # - AND, ((IP-CIDR, 220.243.141.0/32, no-resolve), (DEST-PORT, 6443))
 
   # 微信
   - DOMAIN, dns.weixin.qq.com
