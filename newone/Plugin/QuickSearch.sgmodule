@@ -13,7 +13,7 @@ hostname = %APPEND% duckduckgo.com
 
 
 # d = 百度搜索
-^https:\/\/duckduckgo\.com\/\?q=d\+([^&]+).+  https://www.baidu.com/s?wd=$1 302
+^https:\/\/duckduckgo\.com\/\?q=d\+([^&]+).+  https://www.baidu.com/s?wd=$1 -李彦宏 302
 
 # dimg = 百度图片搜索
 ^https:\/\/duckduckgo\.com\/\?q=dimg\+([^&]+).+ https://image.baidu.com/search/index?tn=baiduimage&word=$1 302
