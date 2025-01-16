@@ -15,6 +15,7 @@ DOMAIN-SUFFIX,whois.pconline.com.cn
 #DOMAIN-SUFFIX,notionusercontent.com
 # googleapi
 DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,gstatic.com
 # apple
 #DOMAIN-SUFFIX,icloud.com
 #DOMAIN-SUFFIX,icloud-content.com
