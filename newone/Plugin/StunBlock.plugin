@@ -1,0 +1,6 @@
+#!name = STUN block
+#!homepage = https://raw.githubusercontent.com/JakATom/DE_SSSProfile/newone/newone/Plugin/StunBlock.plugin
+#!date = 2025-1-23
+
+[Rule]
+PROTOCOL,STUN,REJECT
