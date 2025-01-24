@@ -1,0 +1,35 @@
+{
+    "description": "Block iOS iPadOS Update",
+    "name": "Block iOS iPadOS Update",
+    "rules": [
+                {
+                    "action": "deny",
+                    "notes": "Block iOS iPadOS Update",
+                    "process": "any",
+                    "remote-hosts": "mesu.apple.com"
+                },
+                {
+                    "action": "deny",
+                    "notes": "Block iOS iPadOS Update",
+                    "process": "any",
+                    "remote-hosts": "gdmf.apple.com"
+                },
+                {
+                    "action": "deny",
+                    "notes": "Block iOS iPadOS Update",
+                    "process": "any",
+                    "remote-domains": "updates-http.cdn-apple.com"
+                },
+                {
+                    "action": "deny",
+                    "notes": "Block iOS iPadOS Update",
+                    "process": "any",
+                    "remote-domains": "xp.apple.com"
+                },
+                {
+                    "action": "deny",
+                    "notes": "Block iOS iPadOS Update",
+                    "process": "any",
+                    "remote-domains": "gdmf.v.aaplimg.com"
+                }
+]}
