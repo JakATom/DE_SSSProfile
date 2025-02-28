@@ -116,11 +116,6 @@
     },
     {
       "action" : "deny",
-      "process" : "\/System\/Applications\/Mail.app\/Contents\/MacOS\/Mail",
-      "remote" : "any"
-    },
-    {
-      "action" : "deny",
       "process" : "\/usr\/libexec\/mobileassetd",
       "remote-hosts" : "gdmf.apple.com"
     },
