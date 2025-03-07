@@ -195,8 +195,8 @@ DOMAIN,ntb.lanjie100.com
 DOMAIN-SUFFIX,kuwo.cn
 DOMAIN-SUFFIX,ikea.cn
 # notion
-DOMAIN-SUFFIX,notion.so
-DOMAIN-SUFFIX,notionusercontent.com
+#DOMAIN-SUFFIX,notion.so
+#DOMAIN-SUFFIX,notionusercontent.com
 # 小众软件
 DOMAIN,meta.appinn.net
 # 派安盈
