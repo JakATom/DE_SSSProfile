@@ -24,3 +24,6 @@ DOMAIN-SUFFIX,gstatic.com
 # macked
 DOMAIN-SUFFIX,dl.macked.homes
 DOMAIN-SUFFIX,dl.macked.app
+
+# VSCode
+DOMAIN-SUFFIX,visualstudio.com
