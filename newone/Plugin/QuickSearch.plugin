@@ -18,7 +18,7 @@
 
 
 # d = 百度搜索
-^https:\/\/duckduckgo\.com\/\?q=d\+([^&]+).+ 302 https://www.baidu.com/s?wd=$1 -李彦宏
+^https:\/\/duckduckgo\.com\/\?q=d\+([^&]+).+ 302 https://www.baidu.com/s?wd=$1
 
 # dimg = 百度图片搜索
 ^https:\/\/duckduckgo\.com\/\?q=dimg\+([^&]+).+ 302 https://image.baidu.com/search/index?tn=baiduimage&word=$1
