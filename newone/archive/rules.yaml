@@ -345,16 +345,15 @@ dalao:
     - 'ChinaDomain.list'
     - 'ChinaCompanyIp.list'
     - 'ChinaIp.list'
-    - 'Apple.list'
-    - 'OneDrive.list'
-    - 'Microsoft.list'
-    - 'Apple.list'
   proxy:
     - 'Ruleset/GoogleFCM.list'
     - 'ProxyMedia.list'
     - 'Ruleset/YouTube.list'
     - 'ProxyGFWlist.list'
     - 'Telegram.list'
+    - 'OneDrive.list'
+    - 'Microsoft.list'
+    - 'Apple.list'
 
 
 # 自用的，用于作为最基础的规则，以此为准。
