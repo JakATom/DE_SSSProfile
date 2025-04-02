@@ -32,8 +32,8 @@ DOMAIN-SUFFIX, openai.com
 DOMAIN, api.githubcopilot.com
 DOMAIN, copilot-proxy.githubusercontent.com
 DOMAIN, copilot.microsoft.com
-DOMAIN, sydney.bing.com
-DOMAIN, www.bing.com
+#DOMAIN, sydney.bing.com
+#DOMAIN, www.bing.com
 
 # Gemini
 DOMAIN, bard.google.com
