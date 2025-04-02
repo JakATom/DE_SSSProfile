@@ -28,3 +28,6 @@ DOMAIN-SUFFIX,dl.macked.app
 # VSCode
 DOMAIN-SUFFIX,visualstudio.com
 DOMAIN-SUFFIX,vscode.download.prss.microsoft.com
+
+# for mzzsfy/tts 走proxy
+DOMAIN, speech.platform.bing.com
