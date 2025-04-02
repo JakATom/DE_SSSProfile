@@ -6,7 +6,7 @@ payload:
   - DOMAIN-SUFFIX,bfvvs.com
   - DOMAIN-SUFFIX,bfzycdn.com
   - DOMAIN-SUFFIX,bfzypic.com
-  - DOMAIN-SUFFIX,bing.com
+  #- DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,bytecdntp.com
   - DOMAIN-SUFFIX,clarity.ms
   - DOMAIN-SUFFIX,dagongren2.com
