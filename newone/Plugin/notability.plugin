@@ -1,0 +1,9 @@
+#name=notability plus
+#desc=notability解锁plus
+#anthor=木瞳/公众号：木瞳科技Pro
+
+[Script]
+http-response ^https?:\/\/notability\.com\/(global|subscriptions) script-path =  https://raw.githubusercontent.com/JakATom/DE_SSSProfile/refs/heads/newone/newone/js/notability.js, requires-body = true, tag = notability plus
+
+[Mitm]
+hostname = notability.com
