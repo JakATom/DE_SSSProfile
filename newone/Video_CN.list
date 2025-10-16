@@ -47,14 +47,5 @@ DOMAIN-SUFFIX,ykimg.com
 DOMAIN-SUFFIX,yximgs.com
 DOMAIN-SUFFIX,yzzyimages.com
 DOMAIN-SUFFIX,zhenbuka34.com
-IP-CIDR,61.241.178.139,no-resolve
-IP-CIDR,61.241.178.237,no-resolve
-IP-CIDR,61.241.178.243,no-resolve
-IP-CIDR,104.21.16.1,no-resolve
-IP-CIDR,104.21.64.1,no-resolve
-IP-CIDR,142.250.217.74,no-resolve
-IP-CIDR,142.250.217.110,no-resolve
-IP-CIDR,142.251.33.74,no-resolve
-IP-CIDR,142.251.211.234,no-resolve
-IP-CIDR,142.251.211.238,no-resolve
-IP-CIDR,172.217.14.202,no-resolve
+IP-CIDR,61.241.178.0/24,no-resolve
+IP-CIDR,104.21.0.0/16,no-resolve
