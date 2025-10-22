@@ -48,5 +48,7 @@ payload:
   - DOMAIN-SUFFIX,zhenbuka34.com
   - DOMAIN-SUFFIX,pipiyao.cc
   - DOMAIN-SUFFIX,ffzy-online1.com
+  - DOMAIN-SUFFIX,console.lookbook.top
+  - DOMAIN-SUFFIX,guangzhou-01.ckhao.top
   - IP-CIDR,61.241.178.0/24,no-resolve
   - IP-CIDR,104.21.0.0/16,no-resolve
