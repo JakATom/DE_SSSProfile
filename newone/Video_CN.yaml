@@ -50,5 +50,6 @@ payload:
   - DOMAIN-SUFFIX,ffzy-online1.com
   - DOMAIN-SUFFIX,console.lookbook.top
   - DOMAIN-SUFFIX,guangzhou-01.ckhao.top
+  - DOMAIN-SUFFIX,cos.storagevod.top
   - IP-CIDR,61.241.178.0/24,no-resolve
   - IP-CIDR,104.21.0.0/16,no-resolve
