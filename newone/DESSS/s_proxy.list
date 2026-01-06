@@ -31,3 +31,7 @@ DOMAIN-SUFFIX,vscode.download.prss.microsoft.com
 
 # for mzzsfy/tts 走proxy
 DOMAIN, speech.platform.bing.com
+
+# proxy nodes
+DOMAIN-SUFFIX, weyolo.com
+
