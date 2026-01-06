@@ -34,7 +34,7 @@ DOMAIN, speech.platform.bing.com
 
 # proxy nodes
 DOMAIN-SUFFIX, weyolo.com
-xiaoyao-88.com
-crvesoft.top
-jj
+DOMAIN-SUFFIX, xiaoyao-88.com
+DOMAIN-SUFFIX,crvesoft.top
+DOMAIN-SUFFIX,wcloud.store
 
