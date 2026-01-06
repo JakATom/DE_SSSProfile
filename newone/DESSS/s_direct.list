@@ -202,5 +202,4 @@ DOMAIN,meta.appinn.net
 # 派安盈
 DOMAIN-SUFFIX,payoneer.com
 DOMAIN, payoneer-api.arkoselabs.com
-# linux.do
-DOMAIN-SUFFIX,linux.do
+#
