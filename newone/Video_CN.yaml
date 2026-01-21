@@ -69,5 +69,6 @@ payload:
   - DOMAIN-SUFFIX,bmhyk.vip
   - DOMAIN-SUFFIX,wuhan-01.ckhao.top
   - DOMAIN-SUFFIX,67505tg.kuesf1.com
-  - DOMAIN-SUFFIX,api.mixpanel.com
-  - DOMAIN-SUFFIX,v.lzcdn25.com
+  - DOMAIN-SUFFIX,mixpanel.com
+  - DOMAIN-SUFFIX,lzcdn25.com
+  - DOMAIN-SUFFIX,doubanic.com
