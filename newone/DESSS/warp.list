@@ -64,4 +64,6 @@ DOMAIN-SUFFIX,perplexity.ai
 # Microsoft365的copilot
 DOMAIN-SUFFIX, cloud.microsoft
 DOMAIN-SUFFIX, copilot.microsoft.com
+
+# thatapi 
 DOMAIN-SUFFIX,zxiaoruan.cn
