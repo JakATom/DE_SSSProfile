@@ -78,6 +78,7 @@ DOMAIN,vip.ffzyread1.com
 DOMAIN,vip.ffzy-play9.com
 DOMAIN-SUFFIX,ffzy-online6.com
 DOMAIN,ppvod011.blbtgg.com
+DOMAIN-SUFFIX,vod.ffzy-bofang.com,DIRECT
 # 新概念学习网站
 DOMAIN,nce.ichochy.com
 DOMAIN-SUFFIX,lzcdn28.com
